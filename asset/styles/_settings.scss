@@ -1,0 +1,77 @@
+@font-face {
+  font-family: "Allura";
+  src: url(../font/Allura-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url(../font/Poppins-Medium.ttf);
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(../font//Roboto-Light.ttf);
+}
+
+$font1: Allura, sans-serif;
+$font2: Poppins, sans-serif;
+$font3: Roboto, sans-serif;
+
+$white1: rgb(243, 243, 243);
+$black1: rgb(15, 15, 15);
+$black2: #21201e;
+$grey1: rgb(233, 233, 233);
+$grey2: rgb(209, 209, 209);
+$grey3: rgb(105, 105, 105);
+$copper1: #a57143;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+h2 {
+  font-family: $font1;
+  color: $copper1;
+}
+
+h1,
+h3,
+h5,
+h6,
+.phone-number {
+  font-family: $font2;
+  text-transform: uppercase;
+}
+
+input {
+  position: relative;
+  border: none;
+  //   border-bottom: solid 2px $grey1;
+  //   border-spacing: 10px;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::after {
+    content: "Bonjour";
+    position: absolute;
+    width: 50px;
+    height: 2px;
+    bottom: 1px;
+    left: 0;
+    color: $grey1;
+  }
+}
+
+li {
+  list-style: none;
+}
