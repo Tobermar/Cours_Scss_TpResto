@@ -31,10 +31,35 @@ $copper1: #a57143;
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+  color: $white1;
+}
+
 body {
   text-align: center;
   margin: 0 auto;
   overflow-x: hidden;
+
+
+  &:before {
+    content: "";
+    background: black;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    animation: 1.5s animBefore ease forwards;
+    animation-delay: 0.15s;
+
+    @keyframes animBefore {
+      to {
+        opacity: 0;
+        z-index: 0;
+      }
+    }
+  }
 }
 
 h2 {
@@ -70,6 +95,12 @@ input {
     left: 0;
     color: $grey1;
   }
+}
+
+.price {
+  color: $copper1;
+  font-family: $font3;
+  font-weight: 600;
 }
 
 li {

@@ -16,10 +16,32 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+  color: rgb(243, 243, 243);
+}
+
 body {
   text-align: center;
   margin: 0 auto;
   overflow-x: hidden;
+}
+body:before {
+  content: "";
+  background: black;
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  animation: 1.5s animBefore ease forwards;
+  animation-delay: 0.15s;
+}
+@keyframes animBefore {
+  to {
+    opacity: 0;
+    z-index: 0;
+  }
 }
 
 h2 {
@@ -53,6 +75,88 @@ input::after {
   color: rgb(233, 233, 233);
 }
 
+.price {
+  color: #a57143;
+  font-family: Roboto, sans-serif;
+  font-weight: 600;
+}
+
 li {
   list-style: none;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: url(./bg-slider-06.jpg) center/cover;
+}
+header:before {
+  content: "";
+  background: black;
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  animation: 2.5s animBefore ease forwards;
+  animation-delay: 0.15s;
+}
+@keyframes animBefore {
+  to {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+header nav {
+  width: 75%;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+header .nav-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+header .nav-container h2 {
+  font-size: 3em;
+  color: rgb(243, 243, 243);
+}
+header .nav-container ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+header .nav-container .ul-nav {
+  width: 80%;
+  text-transform: uppercase;
+  font-family: Roboto, sans-serif;
+  font-size: 0.9em;
+}
+header .nav-container .ul-social {
+  width: 10%;
+}
+header .text-container {
+  margin-top: 220px;
+}
+header .text-container h2 {
+  font-size: 4em;
+  font-weight: 500;
+  line-height: 5px;
+}
+header .text-container h1 {
+  font-size: 4em;
+  color: rgb(243, 243, 243);
+  letter-spacing: 15px;
+}
+header .text-container img {
+  margin: 40px 0;
+  height: 35px;
+}
+header .text-container p {
+  color: rgb(243, 243, 243);
+  text-transform: uppercase;
+  font-family: Roboto, sans-serif;
+  letter-spacing: 8px;
 }/*# sourceMappingURL=index.css.map */

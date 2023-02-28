@@ -1,0 +1,91 @@
+header {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: url(./bg-slider-06.jpg) center/cover;
+
+
+    &:before {
+        content: "";
+        background: black;
+        position: absolute;
+        height: 100vh;
+        width: 100%;
+        top: 0;
+        left: 0;
+        animation: 2.5s animBefore ease forwards;
+        animation-delay: 0.15s;
+
+        @keyframes animBefore {
+            to {
+                opacity: 0;
+                z-index: -1;
+            }
+        }
+
+
+    }
+
+    nav {
+        width: 75%;
+        margin: 0 auto;
+        padding: 20px 0;
+    }
+
+    .nav-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        h2 {
+            font-size: 3em;
+            color: $white1;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+
+        .ul-nav {
+            width: 80%;
+            text-transform: uppercase;
+            font-family: $font3;
+            font-size: 0.9em;
+        }
+
+        .ul-social {
+            width: 10%;
+        }
+    }
+
+    .text-container {
+        margin-top: 220px;
+
+        h2 {
+            font-size: 4em;
+            font-weight: 500;
+            line-height: 5px;
+        }
+
+        h1 {
+            font-size: 4em;
+            color: $white1;
+            letter-spacing: 15px;
+        }
+
+        img {
+            margin: 40px 0;
+            height: 35px;
+        }
+
+        p {
+            color: $white1;
+            text-transform: uppercase;
+            font-family: $font3;
+            letter-spacing: 8px;
+        }
+    }
+}
