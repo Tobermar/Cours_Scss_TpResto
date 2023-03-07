@@ -26,27 +26,10 @@ body {
   margin: 0 auto;
   overflow-x: hidden;
 }
-body:before {
-  content: "";
-  background: black;
-  position: absolute;
-  height: 100vh;
-  width: 100%;
-  top: 0;
-  left: 0;
-  animation: 1.5s animBefore ease forwards;
-  animation-delay: 0.15s;
-}
-@keyframes animBefore {
-  to {
-    opacity: 0;
-    z-index: 0;
-  }
-}
 
 h2 {
   font-family: Allura, sans-serif;
-  color: #a57143;
+  color: rgb(163, 112, 68);
 }
 
 h1,
@@ -76,7 +59,7 @@ input::after {
 }
 
 .price {
-  color: #a57143;
+  color: rgb(163, 112, 68);
   font-family: Roboto, sans-serif;
   font-weight: 600;
 }
@@ -159,4 +142,66 @@ header .text-container p {
   text-transform: uppercase;
   font-family: Roboto, sans-serif;
   letter-spacing: 8px;
+}
+
+main .section1 {
+  background: rgb(243, 243, 243);
+  display: grid;
+  grid-template-columns: 50% 50%;
+  height: 540px;
+}
+main .section1 .s1-left-container {
+  padding: 20px;
+}
+main .section1 .s1-left-container .border {
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='rgb(165, 113, 67)' stroke-width='2' stroke-dasharray='3' stroke-dashoffset='10' stroke-linecap='square'/%3e%3c/svg%3e");
+  height: 500px;
+}
+main .section1 .s1-left-container .border .titre {
+  padding: 40px 0 30px;
+}
+main .section1 .s1-left-container .border .titre h2 {
+  font-size: 2.5em;
+  font-weight: 500;
+  line-height: 0.5;
+}
+main .section1 .s1-left-container .border .titre h3 {
+  font-size: 1.5em;
+}
+main .section1 .s1-left-container .border span img {
+  height: 40px;
+}
+main .section1 .s1-left-container .border p {
+  margin: 40px 12px 30px;
+  font-family: Roboto, sans-serif;
+  font-size: 1.3em;
+}
+main .section1 .s1-left-container .border div img {
+  height: 90px;
+  border-radius: 150px;
+  margin-bottom: 15px;
+}
+main .section1 .s1-left-container .border div span {
+  font-family: Roboto, sans-serif;
+  font-weight: 900;
+  font-size: 1.2em;
+  letter-spacing: 1px;
+}
+main .section1 .s1-left-container .border div p {
+  font-family: Roboto, sans-serif;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  font-weight: 600;
+  color: rgb(209, 209, 209);
+  margin: 0;
+}
+main .section1 .s1-right-container {
+  height: 540px;
+  overflow: hidden;
+  position: relative;
+}
+main .section1 .s1-right-container img {
+  position: absolute;
+  left: 0;
+  bottom: -100px;
 }/*# sourceMappingURL=index.css.map */
