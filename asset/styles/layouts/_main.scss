@@ -54,7 +54,7 @@ main {
 
                     span {
                         font-family: $font3;
-                        font-weight: 900;
+                        font-weight: 400;
                         font-size: 1.2em;
                         letter-spacing: 1px;
 
@@ -86,5 +86,193 @@ main {
             }
         }
 
+    }
+
+
+    .section2 {
+
+        position: relative;
+
+        h2 {
+            font-size: 2.5em;
+            font-weight: 500;
+            line-height: 0.5;
+            margin: 80px 0 50px;
+        }
+
+        &>span {
+            img {
+                height: 40px;
+            }
+        }
+
+        ul {
+            width: 50%;
+            margin: 30px auto;
+            display: flex;
+            justify-content: space-between;
+
+            li {
+                color: $white1;
+                font-family: $font3;
+                font-size: 1.3em;
+                position: relative;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    background: $white1;
+                    left: 0;
+                    bottom: -15px;
+                    height: 1px;
+                    width: 100%;
+                }
+            }
+        }
+
+        .img-bg {
+            background: url(/asset/img/bg-menu-01.jpg) center/cover no-repeat;
+            height: 750px;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            bottom: -150px;
+        }
+
+
+
+        .menu {
+            background: $white1;
+            width: 60%;
+            margin: 60px auto;
+            position: relative;
+            padding: 10px 0;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 25% 25% 25% 25%;
+
+            &::before {
+                content: "";
+                position: absolute;
+                background: $copper1;
+                height: 5px;
+                width: 100%;
+                top: 0;
+                left: 0;
+            }
+
+            .dishe {
+                // display: flex;
+                align-items: center;
+                padding: 50px 20px;
+                display: grid;
+                grid-template-columns: 100px 280px 1fr;
+                position: relative;
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    background-image: linear-gradient(90deg, $grey2, $grey2 75%, transparent 75%, transparent 100%);
+                    background-size: 5px 1px;
+                    // background: $grey2;
+                    height: 1px;
+                    width: 420px;
+                    transform: translateX(-50%);
+                    bottom: 0;
+                    left: 50%;
+                }
+
+                img {
+                    border-radius: 150px;
+                }
+
+                .description {
+                    text-align: left;
+                    padding: 0 15px;
+
+                    h4 {
+                        font-family: $font3;
+                        text-transform: uppercase;
+                        font-size: 1em;
+                        font-weight: 600;
+                        padding-bottom: 5px;
+
+                    }
+
+                    p {
+                        font-family: $font3;
+                        font-size: 1.3em;
+                    }
+                }
+
+                .price {
+                    font-size: 1.3em;
+                }
+            }
+        }
+    }
+
+    .booking {
+        margin: 250px auto 0;
+        width: 70%;
+        display: grid;
+        grid-template-columns: 28% 1fr;
+
+        .booking-left-container {
+            background: black;
+            padding: 30px;
+
+            .border {
+
+                background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='white' stroke-width='1' stroke-dasharray='4' stroke-dashoffset='5' stroke-linecap='square'/%3e%3c/svg%3e");
+
+                .title {
+                    padding: 40px 0 40px;
+
+                    h2 {
+                        font-size: 2.8em;
+                        font-weight: 500;
+                        line-height: 0.5;
+                    }
+
+                    h3 {
+                        color: whitesmoke;
+                        font-size: 1.7em;
+                    }
+                }
+
+                img {
+                    height: 35px;
+                }
+
+                .day {
+
+                    padding: 40px 0 0;
+
+                    h3 {
+                        color: $copper1;
+                        margin-bottom: 15px;
+                        font-weight: 500;
+                        font-size: 1.4em;
+                    }
+
+                    p {
+                        color: $white1;
+                        font-family: $font3;
+                    }
+                }
+
+                .phone-number {
+                    color: $copper1;
+                    display: block;
+                    font-size: 1.5em;
+                    padding: 40px 0 40px;
+                }
+            }
+        }
+
+        .booking-right-container {
+            background: $white1;
+        }
     }
 }
