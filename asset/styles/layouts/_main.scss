@@ -286,6 +286,7 @@ main {
                     h3 {
                         font-size: 2.2em;
                         line-height: 0.5;
+                        color: $black2;
                     }
 
                 }
@@ -358,14 +359,15 @@ main {
                     grid-column-start: 2;
                     border: none;
                     color: $white1;
-                    background: $black1;
+                    background: $black2;
+                    min-width: 170px;
                     padding: 20px 15px;
                     border-radius: 50px;
-                    font-size: 1.2em;
+                    font-size: 1.1em;
                     letter-spacing: 4px;
                     text-transform: uppercase;
                     font-weight: 540;
-                    margin: 80px 0 0;
+                    margin: 120px 0 50px;
                 }
             }
 

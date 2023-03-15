@@ -365,6 +365,7 @@ main .booking .booking-right-container .container .title h2 {
 main .booking .booking-right-container .container .title h3 {
   font-size: 2.2em;
   line-height: 0.5;
+  color: #21201e;
 }
 main .booking .booking-right-container img {
   height: 35px;
@@ -423,12 +424,13 @@ main .booking .booking-right-container form button {
   grid-column-start: 2;
   border: none;
   color: #eeeeee;
-  background: rgb(15, 15, 15);
+  background: #21201e;
+  min-width: 170px;
   padding: 20px 15px;
   border-radius: 50px;
-  font-size: 1.2em;
+  font-size: 1.1em;
   letter-spacing: 4px;
   text-transform: uppercase;
   font-weight: 540;
-  margin: 80px 0 0;
+  margin: 120px 0 50px;
 }/*# sourceMappingURL=index.css.map */
