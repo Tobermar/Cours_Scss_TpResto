@@ -216,7 +216,7 @@ main {
         margin: 250px auto 0;
         width: 70%;
         display: grid;
-        grid-template-columns: 28% 1fr;
+        grid-template-columns: 30% 1fr;
 
         .booking-left-container {
             background: black;
@@ -273,6 +273,102 @@ main {
 
         .booking-right-container {
             background: $white1;
+
+            .container {
+                .title {
+                    margin: 90px 0 0;
+
+                    h2 {
+                        font-weight: 500;
+                        font-size: 3.3em;
+                    }
+
+                    h3 {
+                        font-size: 2.2em;
+                        line-height: 0.5;
+                    }
+
+                }
+
+            }
+
+            img {
+                height: 35px;
+                margin: 50px 0 50px;
+
+            }
+
+            form {
+                display: grid;
+                width: 70%;
+                margin: 0 auto;
+                grid-template-columns: 33% 33% 34%;
+                grid-template-rows: 50px 50px 50px;
+                row-gap: 20px;
+                column-gap: 5px;
+                align-items: center;
+                text-align: left;
+
+                div {
+                    // padding: 0 10px;
+                    width: 90%;
+                    position: relative;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        background: $grey2;
+                        height: 1px;
+                        width: 100%;
+                        transform: translateX(-50%);
+                        left: 50%;
+                        bottom: -15px;
+                    }
+                }
+
+                #people {
+                    background: transparent;
+                    border: none;
+                    width: 100%;
+                    font-size: 1em;
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+
+                #booking-day {
+                    background: none;
+                    width: 100%;
+                    font-size: 1.3em;
+                }
+
+                #booking-time {
+                    width: 100%;
+                    background: transparent;
+                    font-size: 1.3em;
+                }
+
+                input {
+                    background: transparent;
+                    font-size: 1em;
+                }
+
+                button {
+                    grid-column-start: 2;
+                    border: none;
+                    color: $white1;
+                    background: $black1;
+                    padding: 20px 15px;
+                    border-radius: 50px;
+                    font-size: 1.2em;
+                    letter-spacing: 4px;
+                    text-transform: uppercase;
+                    font-weight: 540;
+                    margin: 80px 0 0;
+                }
+            }
+
         }
     }
 }

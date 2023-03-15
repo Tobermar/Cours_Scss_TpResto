@@ -309,7 +309,7 @@ main .booking {
   margin: 250px auto 0;
   width: 70%;
   display: grid;
-  grid-template-columns: 28% 1fr;
+  grid-template-columns: 30% 1fr;
 }
 main .booking .booking-left-container {
   background: black;
@@ -354,4 +354,81 @@ main .booking .booking-left-container .border .phone-number {
 }
 main .booking .booking-right-container {
   background: #eeeeee;
+}
+main .booking .booking-right-container .container .title {
+  margin: 90px 0 0;
+}
+main .booking .booking-right-container .container .title h2 {
+  font-weight: 500;
+  font-size: 3.3em;
+}
+main .booking .booking-right-container .container .title h3 {
+  font-size: 2.2em;
+  line-height: 0.5;
+}
+main .booking .booking-right-container img {
+  height: 35px;
+  margin: 50px 0 50px;
+}
+main .booking .booking-right-container form {
+  display: grid;
+  width: 70%;
+  margin: 0 auto;
+  grid-template-columns: 33% 33% 34%;
+  grid-template-rows: 50px 50px 50px;
+  row-gap: 20px;
+  -moz-column-gap: 5px;
+       column-gap: 5px;
+  align-items: center;
+  text-align: left;
+}
+main .booking .booking-right-container form div {
+  width: 90%;
+  position: relative;
+}
+main .booking .booking-right-container form div::after {
+  content: "";
+  position: absolute;
+  background: rgb(209, 209, 209);
+  height: 1px;
+  width: 100%;
+  transform: translateX(-50%);
+  left: 50%;
+  bottom: -15px;
+}
+main .booking .booking-right-container form #people {
+  background: transparent;
+  border: none;
+  width: 100%;
+  font-size: 1em;
+}
+main .booking .booking-right-container form #people:focus {
+  outline: none;
+}
+main .booking .booking-right-container form #booking-day {
+  background: none;
+  width: 100%;
+  font-size: 1.3em;
+}
+main .booking .booking-right-container form #booking-time {
+  width: 100%;
+  background: transparent;
+  font-size: 1.3em;
+}
+main .booking .booking-right-container form input {
+  background: transparent;
+  font-size: 1em;
+}
+main .booking .booking-right-container form button {
+  grid-column-start: 2;
+  border: none;
+  color: #eeeeee;
+  background: rgb(15, 15, 15);
+  padding: 20px 15px;
+  border-radius: 50px;
+  font-size: 1.2em;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-weight: 540;
+  margin: 80px 0 0;
 }/*# sourceMappingURL=index.css.map */
