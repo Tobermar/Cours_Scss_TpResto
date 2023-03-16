@@ -28,6 +28,29 @@ body {
   background: #21201e;
 }
 
+a::-moz-selection, h1::-moz-selection, h2::-moz-selection, h3::-moz-selection, h4::-moz-selection, h5::-moz-selection, h6::-moz-selection, p::-moz-selection, img::-moz-selection, span::-moz-selection, strong::-moz-selection, ul::-moz-selection, div::-moz-selection, button::-moz-selection, input::-moz-selection, option::-moz-selection {
+  background: rgb(209, 209, 209);
+}
+
+a::selection,
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+h5::selection,
+h6::selection,
+p::selection,
+img::selection,
+span::selection,
+strong::selection,
+ul::selection,
+div::selection,
+button::selection,
+input::selection,
+option::selection {
+  background: rgb(209, 209, 209);
+}
+
 h2 {
   font-family: Allura, sans-serif;
   color: rgb(163, 112, 68);
@@ -83,7 +106,7 @@ header:before {
   width: 100%;
   top: 0;
   left: 0;
-  animation: 2.5s animBefore ease forwards;
+  animation: 2.5s animBefore ease-in-out forwards;
   animation-delay: 0.15s;
 }
 @keyframes animBefore {
@@ -112,11 +135,18 @@ header .nav-container ul {
   flex-direction: row;
   justify-content: space-evenly;
 }
+header .nav-container a {
+  transition: 0.2s;
+}
+header .nav-container a:hover {
+  color: rgb(105, 105, 105);
+}
 header .nav-container .ul-nav {
   width: 80%;
   text-transform: uppercase;
   font-family: Roboto, sans-serif;
   font-size: 0.9em;
+  position: relative;
 }
 header .nav-container .ul-social {
   width: 10%;
@@ -203,7 +233,8 @@ main .section1 .s1-right-container {
 }
 main .section1 .s1-right-container img {
   position: absolute;
-  left: 0;
+  transform: translateX(-50%);
+  left: 50%;
   bottom: -100px;
 }
 main .section2 {
@@ -406,6 +437,14 @@ main .booking .booking-right-container form #people {
 main .booking .booking-right-container form #people:focus {
   outline: none;
 }
+main .booking .booking-right-container form #people option {
+  background: #eeeeee;
+  color: #21201e;
+}
+main .booking .booking-right-container form #people option:first-child:hover {
+  background-color: red;
+  color: red;
+}
 main .booking .booking-right-container form #booking-day {
   background: none;
   width: 100%;
@@ -421,16 +460,21 @@ main .booking .booking-right-container form input {
   font-size: 1em;
 }
 main .booking .booking-right-container form button {
-  grid-column-start: 2;
+  grid-column-start: 1;
+  grid-column-end: 4;
   border: none;
   color: #eeeeee;
   background: #21201e;
-  min-width: 170px;
-  padding: 20px 15px;
+  padding: 20px 50px;
   border-radius: 50px;
   font-size: 1.1em;
   letter-spacing: 4px;
   text-transform: uppercase;
   font-weight: 540;
-  margin: 120px 0 50px;
+  margin: 120px auto 50px;
+  cursor: pointer;
+}
+main .booking .booking-right-container form button:hover {
+  box-shadow: 0px 0px 5px black;
+  transform: scale(1.05);
 }/*# sourceMappingURL=index.css.map */

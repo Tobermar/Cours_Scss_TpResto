@@ -42,10 +42,27 @@ body {
   margin: 0 auto;
   overflow-x: hidden;
   background: $grey4;
-
-
-
 }
+
+a::selection,
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+h5::selection,
+h6::selection,
+p::selection,
+img::selection,
+span::selection,
+strong::selection,
+ul::selection,
+div::selection,
+button::selection,
+input::selection,
+option::selection {
+  background: $grey2;
+}
+
 
 h2 {
   font-family: $font1;

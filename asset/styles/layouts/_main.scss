@@ -81,7 +81,8 @@ main {
 
             img {
                 position: absolute;
-                left: 0;
+                transform: translateX(-50%);
+                left: 50%;
                 bottom: -100px;
             }
         }
@@ -336,7 +337,20 @@ main {
                     &:focus {
                         outline: none;
                     }
+
+
+                    option {
+                        background: $white1;
+                        color: $grey4;
+
+                        &:first-child:hover {
+                            background-color: red;
+                            color: red;
+                        }
+                    }
                 }
+
+
 
                 #booking-day {
                     background: none;
@@ -356,18 +370,26 @@ main {
                 }
 
                 button {
-                    grid-column-start: 2;
+                    grid-column-start: 1;
+                    grid-column-end: 4;
                     border: none;
                     color: $white1;
                     background: $black2;
-                    min-width: 170px;
-                    padding: 20px 15px;
+                    // max-width: 170px;
+                    padding: 20px 50px;
                     border-radius: 50px;
                     font-size: 1.1em;
                     letter-spacing: 4px;
                     text-transform: uppercase;
                     font-weight: 540;
-                    margin: 120px 0 50px;
+                    margin: 120px auto 50px;
+                    cursor: pointer;
+
+                    &:hover {
+                        box-shadow: 0px 0px 5px black;
+                        transform: scale(1.05);
+                    }
+
                 }
             }
 

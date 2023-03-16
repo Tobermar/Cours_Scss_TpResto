@@ -13,7 +13,7 @@ header {
         width: 100%;
         top: 0;
         left: 0;
-        animation: 2.5s animBefore ease forwards;
+        animation: 2.5s animBefore ease-in-out forwards;
         animation-delay: 0.15s;
 
         @keyframes animBefore {
@@ -22,8 +22,6 @@ header {
                 z-index: -1;
             }
         }
-
-
     }
 
     nav {
@@ -38,6 +36,7 @@ header {
         justify-content: space-between;
         align-items: center;
 
+
         h2 {
             font-size: 3em;
             color: $white1;
@@ -47,6 +46,15 @@ header {
             display: flex;
             flex-direction: row;
             justify-content: space-evenly;
+
+        }
+
+        a {
+            transition: 0.2s;
+        }
+
+        a:hover {
+            color: $grey3;
         }
 
         .ul-nav {
@@ -54,7 +62,25 @@ header {
             text-transform: uppercase;
             font-family: $font3;
             font-size: 0.9em;
+            position: relative;
+
         }
+
+        // a:hover {
+        //     &:after {
+        //         content: "";
+        //         position: absolute;
+        //         background: $grey3;
+        //         width: 50px;
+        //         height: 1px;
+        //         transform: translateX(-50%);
+        //         left: 50%;
+        //         bottom: -10px;
+        //     }
+        // }
+
+
+
 
         .ul-social {
             width: 10%;
