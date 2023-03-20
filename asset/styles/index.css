@@ -108,6 +108,7 @@ header:before {
   left: 0;
   animation: 2.5s animBefore ease-in-out forwards;
   animation-delay: 0.15s;
+  z-index: 1;
 }
 @keyframes animBefore {
   to {
@@ -129,6 +130,9 @@ header .nav-container {
 header .nav-container h2 {
   font-size: 3em;
   color: #eeeeee;
+}
+header .nav-container h2:hover {
+  color: rgb(105, 105, 105);
 }
 header .nav-container ul {
   display: flex;
@@ -179,14 +183,13 @@ main .section1 {
   background: #eeeeee;
   display: grid;
   grid-template-columns: 50% 50%;
-  height: 540px;
 }
 main .section1 .s1-left-container {
   padding: 20px;
 }
 main .section1 .s1-left-container .border {
   background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='rgb(165, 113, 67)' stroke-width='2' stroke-dasharray='3' stroke-dashoffset='10' stroke-linecap='square'/%3e%3c/svg%3e");
-  height: 500px;
+  min-height: 500px;
 }
 main .section1 .s1-left-container .border .titre {
   padding: 40px 0 30px;
@@ -219,15 +222,16 @@ main .section1 .s1-left-container .border div span {
   letter-spacing: 1px;
 }
 main .section1 .s1-left-container .border div p {
+  display: block;
   font-family: Roboto, sans-serif;
   text-transform: uppercase;
   font-size: 0.9em;
   font-weight: 600;
   color: rgb(209, 209, 209);
   margin: 0;
+  padding-bottom: 20px;
 }
 main .section1 .s1-right-container {
-  height: 540px;
   overflow: hidden;
   position: relative;
 }
@@ -260,8 +264,22 @@ main .section2 ul li {
   font-family: Roboto, sans-serif;
   font-size: 1.3em;
   position: relative;
+  cursor: pointer;
+  transition: 0.2s;
 }
-main .section2 ul li::after {
+main .section2 ul li:hover li:not(:hover) {
+  background: none;
+}
+main .section2 ul li:first-child:after {
+  content: "";
+  position: absolute;
+  background: #eeeeee;
+  left: 0;
+  bottom: -15px;
+  height: 1px;
+  width: 100%;
+}
+main .section2 ul li:hover:after {
   content: "";
   position: absolute;
   background: #eeeeee;
@@ -301,7 +319,7 @@ main .section2 .menu .dishe {
   align-items: center;
   padding: 50px 20px;
   display: grid;
-  grid-template-columns: 100px 280px 1fr;
+  grid-template-columns: 22% 61% 17%;
   position: relative;
 }
 main .section2 .menu .dishe:after {
@@ -315,8 +333,24 @@ main .section2 .menu .dishe:after {
   bottom: 0;
   left: 50%;
 }
+@media screen and (max-width: 1480px) {
+  main .section2 .menu .dishe:after {
+    width: 350px;
+  }
+}
+@media screen and (max-width: 1300px) {
+  main .section2 .menu .dishe:after {
+    width: 280px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  main .section2 .menu .dishe:after {
+    width: 230px;
+  }
+}
 main .section2 .menu .dishe img {
   border-radius: 150px;
+  width: 100%;
 }
 main .section2 .menu .dishe .description {
   text-align: left;
@@ -440,10 +474,6 @@ main .booking .booking-right-container form #people:focus {
 main .booking .booking-right-container form #people option {
   background: #eeeeee;
   color: #21201e;
-}
-main .booking .booking-right-container form #people option:first-child:hover {
-  background-color: red;
-  color: red;
 }
 main .booking .booking-right-container form #booking-day {
   background: none;
