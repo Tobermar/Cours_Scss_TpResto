@@ -152,6 +152,11 @@ main {
                 }
 
 
+                @media screen and (max-width: 900px) {
+                    font-size: 1.1em;
+                }
+
+
             }
         }
 
@@ -175,6 +180,7 @@ main {
             display: grid;
             grid-template-columns: 50% 50%;
             grid-template-rows: 25% 25% 25% 25%;
+
 
             &::before {
                 content: "";
@@ -235,16 +241,36 @@ main {
                         font-weight: 600;
                         padding-bottom: 5px;
 
+                        @media screen and (max-width:1480px) {
+                            font-size: 0.9em;
+                        }
+
+                        // @media screen and (max-width:1300px) {
+                        //     width: 280px;
+                        // }
+
+                        // @media screen and (max-width:1000px) {
+                        //     width: 230px;
+                        // }
+
                     }
 
                     p {
                         font-family: $font3;
                         font-size: 1.3em;
+
+                        @media screen and (max-width: 1480px) {
+                            font-size: 1em;
+                        }
                     }
                 }
 
                 .price {
                     font-size: 1.3em;
+
+                    @media screen and (max-width: 1480px) {
+                        font-size: 1.1em;
+                    }
                 }
             }
         }
@@ -260,12 +286,26 @@ main {
             background: black;
             padding: 30px;
 
+            @media screen and (max-width:1500px) {
+                padding: 25px;
+            }
+
+            @media screen and (max-width:1290px) {
+                padding: 20px;
+            }
+
+            // @media screen and (max-width:1160px) {
+            //     padding: 15px;
+            // }
+
             .border {
 
                 background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='white' stroke-width='1' stroke-dasharray='4' stroke-dashoffset='5' stroke-linecap='square'/%3e%3c/svg%3e");
 
                 .title {
                     padding: 40px 0 40px;
+
+
 
                     h2 {
                         font-size: 2.8em;
@@ -292,141 +332,169 @@ main {
                         margin-bottom: 15px;
                         font-weight: 500;
                         font-size: 1.4em;
-                    }
 
-                    p {
-                        color: $white1;
-                        font-family: $font3;
-                    }
-                }
+                        @media screen and (max-width:1500px) {
+                            font-size: 1.2em;
+                        }
 
-                .phone-number {
-                    color: $copper1;
-                    display: block;
-                    font-size: 1.5em;
-                    padding: 40px 0 40px;
-                }
-            }
-        }
-
-        .booking-right-container {
-            background: $white1;
-
-            .container {
-                .title {
-                    margin: 90px 0 0;
-
-                    h2 {
-                        font-weight: 500;
-                        font-size: 3.3em;
-                    }
-
-                    h3 {
-                        font-size: 2.2em;
-                        line-height: 0.5;
-                        color: $black2;
-                    }
-
-                }
-
-            }
-
-            img {
-                height: 35px;
-                margin: 50px 0 50px;
-
-            }
-
-            form {
-                display: grid;
-                width: 70%;
-                margin: 0 auto;
-                grid-template-columns: 33% 33% 34%;
-                grid-template-rows: 50px 50px 50px;
-                row-gap: 20px;
-                column-gap: 5px;
-                align-items: center;
-                text-align: left;
-
-                div {
-                    // padding: 0 10px;
-                    width: 90%;
-                    position: relative;
-
-                    &::after {
-                        content: "";
-                        position: absolute;
-                        background: $grey2;
-                        height: 1px;
-                        width: 100%;
-                        transform: translateX(-50%);
-                        left: 50%;
-                        bottom: -15px;
-                    }
-                }
-
-                #people {
-                    background: transparent;
-                    border: none;
-                    width: 100%;
-                    font-size: 1em;
-
-                    &:focus {
-                        outline: none;
-                    }
-
-
-                    option {
-                        background: $white1;
-                        color: $grey4;
+                        @media screen and (max-width:1160px) {
+                            font-size: 1em;
+                        }
 
 
                     }
                 }
 
-
-
-                #booking-day {
-                    background: none;
-                    width: 100%;
-                    font-size: 1.3em;
-                }
-
-                #booking-time {
-                    width: 100%;
-                    background: transparent;
-                    font-size: 1.3em;
-                }
-
-                input {
-                    background: transparent;
-                    font-size: 1em;
-                }
-
-                button {
-                    grid-column-start: 1;
-                    grid-column-end: 4;
-                    border: none;
+                p {
                     color: $white1;
-                    background: $black2;
-                    // max-width: 170px;
-                    padding: 20px 50px;
-                    border-radius: 50px;
-                    font-size: 1.1em;
-                    letter-spacing: 4px;
-                    text-transform: uppercase;
-                    font-weight: 540;
-                    margin: 120px auto 50px;
-                    cursor: pointer;
+                    font-family: $font3;
 
-                    &:hover {
-                        box-shadow: 0px 0px 5px black;
-                        transform: scale(1.05);
+                    @media screen and (max-width:1500px) {
+                        font-size: 0.9em;
                     }
+
+                    @media screen and (max-width: 1160px) {
+                        font-size: 0.8em;
+                    }
+                }
+            }
+
+            .phone-number {
+                color: $copper1;
+                display: block;
+                font-size: 1.5em;
+                padding: 40px 0 40px;
+
+                @media screen and (max-width:1500px) {
+                    font-size: 1.3em;
+                }
+
+                @media screen and (max-width:1320px) {
+                    font-size: 1.1em;
+                }
+            }
+        }
+    }
+
+    .booking-right-container {
+        background: $white1;
+
+
+        .container {
+
+            .title {
+                margin: 90px 0 0;
+
+                h2 {
+                    font-weight: 500;
+                    font-size: 3.3em;
+                }
+
+                h3 {
+                    font-size: 2.2em;
+                    line-height: 0.5;
+                    color: $black2;
+                }
+
+            }
+
+        }
+
+        img {
+            height: 35px;
+            margin: 50px 0 50px;
+
+        }
+
+        form {
+            display: grid;
+            width: 70%;
+            margin: 0 auto;
+            grid-template-columns: 33% 33% 34%;
+            grid-template-rows: 50px 50px 50px;
+            row-gap: 20px;
+            column-gap: 5px;
+            align-items: center;
+            text-align: left;
+
+            div {
+                // padding: 0 10px;
+                width: 90%;
+                position: relative;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    background: $grey2;
+                    height: 1px;
+                    width: 100%;
+                    transform: translateX(-50%);
+                    left: 50%;
+                    bottom: -15px;
+                }
+            }
+
+            #people {
+                background: transparent;
+                border: none;
+                width: 100%;
+                font-size: 1em;
+
+                &:focus {
+                    outline: none;
+                }
+
+
+                option {
+                    background: $white1;
+                    color: $grey4;
+
 
                 }
             }
 
+
+
+            #booking-day {
+                background: none;
+                width: 100%;
+                font-size: 1.3em;
+            }
+
+            #booking-time {
+                width: 100%;
+                background: transparent;
+                font-size: 1.3em;
+            }
+
+            input {
+                background: transparent;
+                font-size: 1em;
+            }
+
+            button {
+                grid-column-start: 1;
+                grid-column-end: 4;
+                border: none;
+                color: $white1;
+                background: $black2;
+                // max-width: 170px;
+                padding: 20px 50px;
+                border-radius: 50px;
+                font-size: 1.1em;
+                letter-spacing: 4px;
+                text-transform: uppercase;
+                font-weight: 540;
+                margin: 120px auto 50px;
+                cursor: pointer;
+
+                &:hover {
+                    box-shadow: 0px 0px 5px black;
+                    transform: scale(1.05);
+                }
+
+            }
         }
+
     }
 }

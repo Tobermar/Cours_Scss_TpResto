@@ -120,6 +120,7 @@ header nav {
   width: 75%;
   margin: 0 auto;
   padding: 20px 0;
+  height: 100px;
 }
 header .nav-container {
   display: flex;
@@ -131,6 +132,11 @@ header .nav-container h2 {
   font-size: 3em;
   color: #eeeeee;
 }
+@media screen and (max-width: 900px) {
+  header .nav-container h2 {
+    font-size: 2.5em;
+  }
+}
 header .nav-container h2:hover {
   color: rgb(105, 105, 105);
 }
@@ -138,6 +144,11 @@ header .nav-container ul {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+}
+@media screen and (max-width: 900px) {
+  header .nav-container ul {
+    font-size: 0.9em;
+  }
 }
 header .nav-container a {
   transition: 0.2s;
@@ -151,6 +162,11 @@ header .nav-container .ul-nav {
   font-family: Roboto, sans-serif;
   font-size: 0.9em;
   position: relative;
+}
+@media screen and (max-width: 900px) {
+  header .nav-container .ul-nav a {
+    font-size: 0.9em;
+  }
 }
 header .nav-container .ul-social {
   width: 10%;
@@ -288,6 +304,11 @@ main .section2 ul li:hover:after {
   height: 1px;
   width: 100%;
 }
+@media screen and (max-width: 900px) {
+  main .section2 ul li {
+    font-size: 1.1em;
+  }
+}
 main .section2 .img-bg {
   background: url(/asset/img/bg-menu-01.jpg) center/cover no-repeat;
   height: 750px;
@@ -363,12 +384,27 @@ main .section2 .menu .dishe .description h4 {
   font-weight: 600;
   padding-bottom: 5px;
 }
+@media screen and (max-width: 1480px) {
+  main .section2 .menu .dishe .description h4 {
+    font-size: 0.9em;
+  }
+}
 main .section2 .menu .dishe .description p {
   font-family: Roboto, sans-serif;
   font-size: 1.3em;
 }
+@media screen and (max-width: 1480px) {
+  main .section2 .menu .dishe .description p {
+    font-size: 1em;
+  }
+}
 main .section2 .menu .dishe .price {
   font-size: 1.3em;
+}
+@media screen and (max-width: 1480px) {
+  main .section2 .menu .dishe .price {
+    font-size: 1.1em;
+  }
 }
 main .booking {
   margin: 250px auto 0;
@@ -379,6 +415,16 @@ main .booking {
 main .booking .booking-left-container {
   background: black;
   padding: 30px;
+}
+@media screen and (max-width: 1500px) {
+  main .booking .booking-left-container {
+    padding: 25px;
+  }
+}
+@media screen and (max-width: 1290px) {
+  main .booking .booking-left-container {
+    padding: 20px;
+  }
 }
 main .booking .booking-left-container .border {
   background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='white' stroke-width='1' stroke-dasharray='4' stroke-dashoffset='5' stroke-linecap='square'/%3e%3c/svg%3e");
@@ -407,36 +453,66 @@ main .booking .booking-left-container .border .day h3 {
   font-weight: 500;
   font-size: 1.4em;
 }
-main .booking .booking-left-container .border .day p {
+@media screen and (max-width: 1500px) {
+  main .booking .booking-left-container .border .day h3 {
+    font-size: 1.2em;
+  }
+}
+@media screen and (max-width: 1160px) {
+  main .booking .booking-left-container .border .day h3 {
+    font-size: 1em;
+  }
+}
+main .booking .booking-left-container .border p {
   color: #eeeeee;
   font-family: Roboto, sans-serif;
 }
-main .booking .booking-left-container .border .phone-number {
+@media screen and (max-width: 1500px) {
+  main .booking .booking-left-container .border p {
+    font-size: 0.9em;
+  }
+}
+@media screen and (max-width: 1160px) {
+  main .booking .booking-left-container .border p {
+    font-size: 0.8em;
+  }
+}
+main .booking .booking-left-container .phone-number {
   color: rgb(163, 112, 68);
   display: block;
   font-size: 1.5em;
   padding: 40px 0 40px;
 }
-main .booking .booking-right-container {
+@media screen and (max-width: 1500px) {
+  main .booking .booking-left-container .phone-number {
+    font-size: 1.3em;
+  }
+}
+@media screen and (max-width: 1320px) {
+  main .booking .booking-left-container .phone-number {
+    font-size: 1.1em;
+  }
+}
+main .booking-right-container {
   background: #eeeeee;
 }
-main .booking .booking-right-container .container .title {
+main .booking-right-container .container .title {
   margin: 90px 0 0;
 }
-main .booking .booking-right-container .container .title h2 {
+main .booking-right-container .container .title h2 {
   font-weight: 500;
   font-size: 3.3em;
 }
-main .booking .booking-right-container .container .title h3 {
+main .booking-right-container .container .title h3 {
   font-size: 2.2em;
   line-height: 0.5;
   color: #21201e;
 }
-main .booking .booking-right-container img {
+main .booking-right-container img {
   height: 35px;
   margin: 50px 0 50px;
 }
-main .booking .booking-right-container form {
+main .booking-right-container form {
   display: grid;
   width: 70%;
   margin: 0 auto;
@@ -448,11 +524,11 @@ main .booking .booking-right-container form {
   align-items: center;
   text-align: left;
 }
-main .booking .booking-right-container form div {
+main .booking-right-container form div {
   width: 90%;
   position: relative;
 }
-main .booking .booking-right-container form div::after {
+main .booking-right-container form div::after {
   content: "";
   position: absolute;
   background: rgb(209, 209, 209);
@@ -462,34 +538,34 @@ main .booking .booking-right-container form div::after {
   left: 50%;
   bottom: -15px;
 }
-main .booking .booking-right-container form #people {
+main .booking-right-container form #people {
   background: transparent;
   border: none;
   width: 100%;
   font-size: 1em;
 }
-main .booking .booking-right-container form #people:focus {
+main .booking-right-container form #people:focus {
   outline: none;
 }
-main .booking .booking-right-container form #people option {
+main .booking-right-container form #people option {
   background: #eeeeee;
   color: #21201e;
 }
-main .booking .booking-right-container form #booking-day {
+main .booking-right-container form #booking-day {
   background: none;
   width: 100%;
   font-size: 1.3em;
 }
-main .booking .booking-right-container form #booking-time {
+main .booking-right-container form #booking-time {
   width: 100%;
   background: transparent;
   font-size: 1.3em;
 }
-main .booking .booking-right-container form input {
+main .booking-right-container form input {
   background: transparent;
   font-size: 1em;
 }
-main .booking .booking-right-container form button {
+main .booking-right-container form button {
   grid-column-start: 1;
   grid-column-end: 4;
   border: none;
@@ -504,7 +580,7 @@ main .booking .booking-right-container form button {
   margin: 120px auto 50px;
   cursor: pointer;
 }
-main .booking .booking-right-container form button:hover {
+main .booking-right-container form button:hover {
   box-shadow: 0px 0px 5px black;
   transform: scale(1.05);
 }/*# sourceMappingURL=index.css.map */
