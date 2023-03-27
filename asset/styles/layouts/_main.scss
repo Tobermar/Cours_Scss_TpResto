@@ -564,8 +564,9 @@ main {
                             position: relative;
 
                             img {
-                                height: 215px;
+                                height: 220px;
                                 // position: relative;
+
                             }
 
                             .july {
@@ -574,7 +575,7 @@ main {
                                 top: 50%;
                                 left: 50%;
                                 background: $black2;
-                                padding: 30px;
+                                padding: 20px 30px;
 
                                 p {
                                     color: $white1;
@@ -589,23 +590,82 @@ main {
                                 p:last-child {
                                     font-size: 1.3em;
                                 }
-
-
                             }
 
                         }
 
-
-
                         .white-bg {
-                            grid-column: 2/3;
-                        }
+                            font-family: $font3;
 
+                            &>p {
+                                font-size: 1.5em;
+                            }
+
+                            div {
+                                display: flex;
+
+                                div {
+                                    padding: 0 5px;
+
+                                    p {
+                                        font-size: 1.2em;
+                                        padding: 0 5px;
+                                    }
+                                }
+                            }
+
+
+                            a {
+                                color: red;
+                            }
+
+
+                        }
 
                     }
 
                     .grid2 {
                         grid-column: 1/2;
+                        width: 100%;
+                        display: grid;
+                        grid-template-columns: 35% 65%;
+
+
+
+                        .event-bg2 {
+                            overflow: hidden;
+                            position: relative;
+
+                            img {
+                                height: 220px;
+                                // position: relative;
+
+                            }
+
+                            .july {
+                                position: absolute;
+                                transform: translate(-50%, -50%);
+                                top: 50%;
+                                left: 50%;
+                                background: $black2;
+                                padding: 20px 30px;
+
+                                p {
+                                    color: $white1;
+                                    font-family: $font3;
+                                }
+
+                                p:first-child {
+                                    font-size: 2em;
+                                    font-weight: 600;
+                                }
+
+                                p:last-child {
+                                    font-size: 1.3em;
+                                }
+                            }
+                        }
+
                     }
 
                     .grid3 {
@@ -614,16 +674,14 @@ main {
                     }
                 }
             }
-        }
 
+        }
     }
 
     .section5 {
 
         .section5-container {
-
             margin: 250px 0;
         }
     }
-
 }

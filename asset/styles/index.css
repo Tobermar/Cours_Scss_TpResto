@@ -647,7 +647,7 @@ main .section-event .section-event-container .event-img-container .event-img-gri
   position: relative;
 }
 main .section-event .section-event-container .event-img-container .event-img-grid-container .grid1 .event-bg1 img {
-  height: 215px;
+  height: 220px;
 }
 main .section-event .section-event-container .event-img-container .event-img-grid-container .grid1 .event-bg1 .july {
   position: absolute;
@@ -655,7 +655,7 @@ main .section-event .section-event-container .event-img-container .event-img-gri
   top: 50%;
   left: 50%;
   background: #21201e;
-  padding: 30px;
+  padding: 20px 30px;
 }
 main .section-event .section-event-container .event-img-container .event-img-grid-container .grid1 .event-bg1 .july p {
   color: #eeeeee;
@@ -669,10 +669,55 @@ main .section-event .section-event-container .event-img-container .event-img-gri
   font-size: 1.3em;
 }
 main .section-event .section-event-container .event-img-container .event-img-grid-container .grid1 .white-bg {
-  grid-column: 2/3;
+  font-family: Roboto, sans-serif;
+}
+main .section-event .section-event-container .event-img-container .event-img-grid-container .grid1 .white-bg > p {
+  font-size: 1.5em;
+}
+main .section-event .section-event-container .event-img-container .event-img-grid-container .grid1 .white-bg div {
+  display: flex;
+}
+main .section-event .section-event-container .event-img-container .event-img-grid-container .grid1 .white-bg div div {
+  padding: 0 5px;
+}
+main .section-event .section-event-container .event-img-container .event-img-grid-container .grid1 .white-bg div div p {
+  font-size: 1.2em;
+  padding: 0 5px;
+}
+main .section-event .section-event-container .event-img-container .event-img-grid-container .grid1 .white-bg a {
+  color: red;
 }
 main .section-event .section-event-container .event-img-container .event-img-grid-container .grid2 {
   grid-column: 1/2;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 35% 65%;
+}
+main .section-event .section-event-container .event-img-container .event-img-grid-container .grid2 .event-bg2 {
+  overflow: hidden;
+  position: relative;
+}
+main .section-event .section-event-container .event-img-container .event-img-grid-container .grid2 .event-bg2 img {
+  height: 220px;
+}
+main .section-event .section-event-container .event-img-container .event-img-grid-container .grid2 .event-bg2 .july {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  background: #21201e;
+  padding: 20px 30px;
+}
+main .section-event .section-event-container .event-img-container .event-img-grid-container .grid2 .event-bg2 .july p {
+  color: #eeeeee;
+  font-family: Roboto, sans-serif;
+}
+main .section-event .section-event-container .event-img-container .event-img-grid-container .grid2 .event-bg2 .july p:first-child {
+  font-size: 2em;
+  font-weight: 600;
+}
+main .section-event .section-event-container .event-img-container .event-img-grid-container .grid2 .event-bg2 .july p:last-child {
+  font-size: 1.3em;
 }
 main .section-event .section-event-container .event-img-container .event-img-grid-container .grid3 {
   grid-column: 2/3;
