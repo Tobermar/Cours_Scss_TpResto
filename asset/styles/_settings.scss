@@ -78,11 +78,18 @@ h6,
   text-transform: uppercase;
 }
 
+#people,
+#booking-day,
+#booking-time {
+  cursor: pointer;
+}
+
 input {
   position: relative;
   border: none;
   //   border-bottom: solid 2px $grey1;
   //   border-spacing: 10px;
+
 
   &:focus {
     outline: none;

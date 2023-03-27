@@ -92,7 +92,6 @@ main {
 
     }
 
-
     .section2 {
 
         position: relative;
@@ -280,7 +279,7 @@ main {
         margin: 250px auto 0;
         width: 70%;
         display: grid;
-        grid-template-columns: 30% 1fr;
+        grid-template-columns: 30% 70%;
 
         .booking-left-container {
             background: black;
@@ -372,129 +371,259 @@ main {
                 @media screen and (max-width:1320px) {
                     font-size: 1.1em;
                 }
+
+                @media screen and (max-width:1000px) {
+                    font-size: 1em;
+                }
             }
+        }
+
+        .booking-right-container {
+            background: $white1;
+
+
+            .container {
+
+                .title {
+                    margin: 90px 0 0;
+
+                    @media screen and (max-width:1500px) {
+                        margin: 85px 0 0;
+                    }
+
+                    @media screen and (max-width:1290px) {
+                        margin: 80px 0 0;
+                    }
+
+                    @media screen and (max-width:1160px) {
+                        margin: 70px 0 0;
+                    }
+
+                    h2 {
+                        font-weight: 500;
+                        font-size: 3.3em;
+                    }
+
+                    h3 {
+                        font-size: 2.2em;
+                        line-height: 0.5;
+                        color: $black2;
+                    }
+
+                }
+
+            }
+
+            img {
+                height: 35px;
+                margin: 50px 0 50px;
+
+            }
+
+            form {
+                display: grid;
+                width: 70%;
+                margin: 0 auto;
+                grid-template-columns: 33% 33% 34%;
+                grid-template-rows: 50px 50px 50px;
+                row-gap: 20px;
+                column-gap: 5px;
+                align-items: center;
+                text-align: left;
+
+                div {
+                    // padding: 0 10px;
+                    width: 90%;
+                    position: relative;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        background: $grey2;
+                        height: 1px;
+                        width: 100%;
+                        transform: translateX(-50%);
+                        left: 50%;
+                        bottom: -15px;
+                    }
+                }
+
+                #people {
+                    background: transparent;
+                    border: none;
+                    width: 100%;
+                    font-size: 1em;
+
+                    &:focus {
+                        outline: none;
+                    }
+
+
+                    option {
+                        background: $white1;
+                        color: $grey4;
+
+
+                    }
+                }
+
+
+
+                #booking-day {
+                    background: none;
+                    width: 100%;
+                    font-size: 1.3em;
+                }
+
+                #booking-time {
+                    width: 100%;
+                    background: transparent;
+                    font-size: 1.3em;
+                }
+
+                input {
+                    background: transparent;
+                    font-size: 1em;
+                }
+
+                button {
+                    grid-column-start: 1;
+                    grid-column-end: 4;
+                    border: none;
+                    color: $white1;
+                    background: $black2;
+                    // max-width: 170px;
+                    padding: 20px 50px;
+                    border-radius: 50px;
+                    font-size: 1.1em;
+                    letter-spacing: 4px;
+                    text-transform: uppercase;
+                    font-weight: 540;
+                    margin: 120px auto 50px;
+                    cursor: pointer;
+
+                    &:hover {
+                        box-shadow: 0px 0px 5px black;
+                        transform: scale(1.05);
+                    }
+
+                }
+            }
+
         }
     }
 
-    .booking-right-container {
-        background: $white1;
+    .section-event {
+        width: 70%;
+        margin: 150px auto 0;
 
+        .section-event-container {
 
-        .container {
-
-            .title {
-                margin: 90px 0 0;
-
+            .section-event-title {
                 h2 {
                     font-weight: 500;
-                    font-size: 3.3em;
+                    font-size: 3.5em;
                 }
 
                 h3 {
-                    font-size: 2.2em;
-                    line-height: 0.5;
-                    color: $black2;
-                }
-
-            }
-
-        }
-
-        img {
-            height: 35px;
-            margin: 50px 0 50px;
-
-        }
-
-        form {
-            display: grid;
-            width: 70%;
-            margin: 0 auto;
-            grid-template-columns: 33% 33% 34%;
-            grid-template-rows: 50px 50px 50px;
-            row-gap: 20px;
-            column-gap: 5px;
-            align-items: center;
-            text-align: left;
-
-            div {
-                // padding: 0 10px;
-                width: 90%;
-                position: relative;
-
-                &::after {
-                    content: "";
-                    position: absolute;
-                    background: $grey2;
-                    height: 1px;
-                    width: 100%;
-                    transform: translateX(-50%);
-                    left: 50%;
-                    bottom: -15px;
+                    font-size: 2.5em;
+                    line-height: 0.7;
+                    color: $white1;
+                    letter-spacing: 2px;
                 }
             }
 
-            #people {
-                background: transparent;
-                border: none;
-                width: 100%;
-                font-size: 1em;
-
-                &:focus {
-                    outline: none;
-                }
-
-
-                option {
-                    background: $white1;
-                    color: $grey4;
-
-
+            .img-couvert-gris {
+                img {
+                    height: 40px;
+                    margin: 50px 0;
                 }
             }
 
+            .event-img-container {
+
+                .event-img-grid-container {
+                    display: grid;
+                    gap: 20px;
+                    grid-template-columns: 60% 40%;
+                    grid-template-rows: 215px 215px;
+
+                    div {
+                        background: $white1;
+                    }
+
+                    .grid1 {
+                        width: 100%;
+                        display: grid;
+                        grid-template-columns: 35% 65%;
 
 
-            #booking-day {
-                background: none;
-                width: 100%;
-                font-size: 1.3em;
-            }
 
-            #booking-time {
-                width: 100%;
-                background: transparent;
-                font-size: 1.3em;
-            }
+                        .event-bg1 {
+                            overflow: hidden;
+                            position: relative;
 
-            input {
-                background: transparent;
-                font-size: 1em;
-            }
+                            img {
+                                height: 215px;
+                                // position: relative;
+                            }
 
-            button {
-                grid-column-start: 1;
-                grid-column-end: 4;
-                border: none;
-                color: $white1;
-                background: $black2;
-                // max-width: 170px;
-                padding: 20px 50px;
-                border-radius: 50px;
-                font-size: 1.1em;
-                letter-spacing: 4px;
-                text-transform: uppercase;
-                font-weight: 540;
-                margin: 120px auto 50px;
-                cursor: pointer;
+                            .july {
+                                position: absolute;
+                                transform: translate(-50%, -50%);
+                                top: 50%;
+                                left: 50%;
+                                background: $black2;
+                                padding: 30px;
 
-                &:hover {
-                    box-shadow: 0px 0px 5px black;
-                    transform: scale(1.05);
+                                p {
+                                    color: $white1;
+                                    font-family: $font3;
+                                }
+
+                                p:first-child {
+                                    font-size: 2em;
+                                    font-weight: 600;
+                                }
+
+                                p:last-child {
+                                    font-size: 1.3em;
+                                }
+
+
+                            }
+
+                        }
+
+
+
+                        .white-bg {
+                            grid-column: 2/3;
+                        }
+
+
+                    }
+
+                    .grid2 {
+                        grid-column: 1/2;
+                    }
+
+                    .grid3 {
+                        grid-column: 2/3;
+                        grid-row: -3/-1;
+                    }
                 }
-
             }
         }
 
     }
+
+    .section5 {
+
+        .section5-container {
+
+            margin: 250px 0;
+        }
+    }
+
 }

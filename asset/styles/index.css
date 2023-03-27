@@ -65,6 +65,12 @@ h6,
   text-transform: uppercase;
 }
 
+#people,
+#booking-day,
+#booking-time {
+  cursor: pointer;
+}
+
 input {
   position: relative;
   border: none;
@@ -410,7 +416,7 @@ main .booking {
   margin: 250px auto 0;
   width: 70%;
   display: grid;
-  grid-template-columns: 30% 1fr;
+  grid-template-columns: 30% 70%;
 }
 main .booking .booking-left-container {
   background: black;
@@ -493,26 +499,46 @@ main .booking .booking-left-container .phone-number {
     font-size: 1.1em;
   }
 }
-main .booking-right-container {
+@media screen and (max-width: 1000px) {
+  main .booking .booking-left-container .phone-number {
+    font-size: 1em;
+  }
+}
+main .booking .booking-right-container {
   background: #eeeeee;
 }
-main .booking-right-container .container .title {
+main .booking .booking-right-container .container .title {
   margin: 90px 0 0;
 }
-main .booking-right-container .container .title h2 {
+@media screen and (max-width: 1500px) {
+  main .booking .booking-right-container .container .title {
+    margin: 85px 0 0;
+  }
+}
+@media screen and (max-width: 1290px) {
+  main .booking .booking-right-container .container .title {
+    margin: 80px 0 0;
+  }
+}
+@media screen and (max-width: 1160px) {
+  main .booking .booking-right-container .container .title {
+    margin: 70px 0 0;
+  }
+}
+main .booking .booking-right-container .container .title h2 {
   font-weight: 500;
   font-size: 3.3em;
 }
-main .booking-right-container .container .title h3 {
+main .booking .booking-right-container .container .title h3 {
   font-size: 2.2em;
   line-height: 0.5;
   color: #21201e;
 }
-main .booking-right-container img {
+main .booking .booking-right-container img {
   height: 35px;
   margin: 50px 0 50px;
 }
-main .booking-right-container form {
+main .booking .booking-right-container form {
   display: grid;
   width: 70%;
   margin: 0 auto;
@@ -524,11 +550,11 @@ main .booking-right-container form {
   align-items: center;
   text-align: left;
 }
-main .booking-right-container form div {
+main .booking .booking-right-container form div {
   width: 90%;
   position: relative;
 }
-main .booking-right-container form div::after {
+main .booking .booking-right-container form div::after {
   content: "";
   position: absolute;
   background: rgb(209, 209, 209);
@@ -538,34 +564,34 @@ main .booking-right-container form div::after {
   left: 50%;
   bottom: -15px;
 }
-main .booking-right-container form #people {
+main .booking .booking-right-container form #people {
   background: transparent;
   border: none;
   width: 100%;
   font-size: 1em;
 }
-main .booking-right-container form #people:focus {
+main .booking .booking-right-container form #people:focus {
   outline: none;
 }
-main .booking-right-container form #people option {
+main .booking .booking-right-container form #people option {
   background: #eeeeee;
   color: #21201e;
 }
-main .booking-right-container form #booking-day {
+main .booking .booking-right-container form #booking-day {
   background: none;
   width: 100%;
   font-size: 1.3em;
 }
-main .booking-right-container form #booking-time {
+main .booking .booking-right-container form #booking-time {
   width: 100%;
   background: transparent;
   font-size: 1.3em;
 }
-main .booking-right-container form input {
+main .booking .booking-right-container form input {
   background: transparent;
   font-size: 1em;
 }
-main .booking-right-container form button {
+main .booking .booking-right-container form button {
   grid-column-start: 1;
   grid-column-end: 4;
   border: none;
@@ -580,7 +606,78 @@ main .booking-right-container form button {
   margin: 120px auto 50px;
   cursor: pointer;
 }
-main .booking-right-container form button:hover {
+main .booking .booking-right-container form button:hover {
   box-shadow: 0px 0px 5px black;
   transform: scale(1.05);
+}
+main .section-event {
+  width: 70%;
+  margin: 150px auto 0;
+}
+main .section-event .section-event-container .section-event-title h2 {
+  font-weight: 500;
+  font-size: 3.5em;
+}
+main .section-event .section-event-container .section-event-title h3 {
+  font-size: 2.5em;
+  line-height: 0.7;
+  color: #eeeeee;
+  letter-spacing: 2px;
+}
+main .section-event .section-event-container .img-couvert-gris img {
+  height: 40px;
+  margin: 50px 0;
+}
+main .section-event .section-event-container .event-img-container .event-img-grid-container {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: 215px 215px;
+}
+main .section-event .section-event-container .event-img-container .event-img-grid-container div {
+  background: #eeeeee;
+}
+main .section-event .section-event-container .event-img-container .event-img-grid-container .grid1 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 35% 65%;
+}
+main .section-event .section-event-container .event-img-container .event-img-grid-container .grid1 .event-bg1 {
+  overflow: hidden;
+  position: relative;
+}
+main .section-event .section-event-container .event-img-container .event-img-grid-container .grid1 .event-bg1 img {
+  height: 215px;
+}
+main .section-event .section-event-container .event-img-container .event-img-grid-container .grid1 .event-bg1 .july {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  background: #21201e;
+  padding: 30px;
+}
+main .section-event .section-event-container .event-img-container .event-img-grid-container .grid1 .event-bg1 .july p {
+  color: #eeeeee;
+  font-family: Roboto, sans-serif;
+}
+main .section-event .section-event-container .event-img-container .event-img-grid-container .grid1 .event-bg1 .july p:first-child {
+  font-size: 2em;
+  font-weight: 600;
+}
+main .section-event .section-event-container .event-img-container .event-img-grid-container .grid1 .event-bg1 .july p:last-child {
+  font-size: 1.3em;
+}
+main .section-event .section-event-container .event-img-container .event-img-grid-container .grid1 .white-bg {
+  grid-column: 2/3;
+}
+main .section-event .section-event-container .event-img-container .event-img-grid-container .grid2 {
+  grid-column: 1/2;
+}
+main .section-event .section-event-container .event-img-container .event-img-grid-container .grid3 {
+  grid-column: 2/3;
+  grid-row: -3/-1;
+}
+main .section5 .section5-container {
+  margin: 250px 0;
 }/*# sourceMappingURL=index.css.map */
