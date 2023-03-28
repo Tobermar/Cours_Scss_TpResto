@@ -552,136 +552,162 @@ main {
                         background: $white1;
                     }
 
-                    .grid1 {
-                        width: 100%;
-                        display: grid;
-                        grid-template-columns: 35% 65%;
+                    .event-bg1,
+                    .event-bg2 {
+                        overflow: hidden;
+                        position: relative;
 
-
-
-                        .event-bg1 {
-                            overflow: hidden;
-                            position: relative;
-
-                            img {
-                                height: 220px;
-                                // position: relative;
-
-                            }
-
-                            .july {
-                                position: absolute;
-                                transform: translate(-50%, -50%);
-                                top: 50%;
-                                left: 50%;
-                                background: $black2;
-                                padding: 20px 30px;
-
-                                p {
-                                    color: $white1;
-                                    font-family: $font3;
-                                }
-
-                                p:first-child {
-                                    font-size: 2em;
-                                    font-weight: 600;
-                                }
-
-                                p:last-child {
-                                    font-size: 1.3em;
-                                }
-                            }
-
+                        img {
+                            height: 220px;
                         }
 
-                        .white-bg {
-                            font-family: $font3;
+                        .july {
+                            position: absolute;
+                            transform: translate(-50%, -50%);
+                            top: 50%;
+                            left: 50%;
+                            background: $black2;
+                            padding: 20px 30px;
 
-                            &>p {
-                                font-size: 1.5em;
+                            p {
+                                color: $white1;
+                                font-family: $font3;
                             }
 
-                            div {
-                                display: flex;
-
-                                div {
-                                    padding: 0 5px;
-
-                                    p {
-                                        font-size: 1.2em;
-                                        padding: 0 5px;
-                                    }
-                                }
+                            p:first-child {
+                                font-size: 2em;
+                                font-weight: 600;
                             }
 
-
-                            a {
-                                color: red;
+                            p:last-child {
+                                font-size: 1.2em;
                             }
-
-
                         }
 
                     }
 
+                    .grid1,
                     .grid2 {
-                        grid-column: 1/2;
                         width: 100%;
                         display: grid;
                         grid-template-columns: 35% 65%;
+                    }
 
+                    .white-bg {
+                        font-family: $font3;
+                        text-align: left;
+                        margin-left: 25px;
 
-
-                        .event-bg2 {
-                            overflow: hidden;
-                            position: relative;
-
-                            img {
-                                height: 220px;
-                                // position: relative;
-
-                            }
-
-                            .july {
-                                position: absolute;
-                                transform: translate(-50%, -50%);
-                                top: 50%;
-                                left: 50%;
-                                background: $black2;
-                                padding: 20px 30px;
-
-                                p {
-                                    color: $white1;
-                                    font-family: $font3;
-                                }
-
-                                p:first-child {
-                                    font-size: 2em;
-                                    font-weight: 600;
-                                }
-
-                                p:last-child {
-                                    font-size: 1.3em;
-                                }
-                            }
+                        &>p {
+                            font-size: 1.7em;
+                            margin: 40px 0 0;
+                            letter-spacing: 1px;
                         }
 
+                        div {
+
+                            padding: 20px 0;
+                            display: flex;
+                            align-items: center;
+
+                            color: $grey2;
+
+                            p {
+                                font-size: 1.2em;
+                                padding: 0 10px 0 5px;
+                            }
+
+                            a {
+                                color: $grey2;
+                            }
+
+                        }
+
+                        a {
+                            color: $black2;
+                            font-size: 1.1em;
+                            text-transform: uppercase;
+                            font-weight: 600;
+                            letter-spacing: 1px;
+                        }
+                    }
+
+                    .grid2 {
+                        grid-column: 1/2;
                     }
 
                     .grid3 {
                         grid-column: 2/3;
                         grid-row: -3/-1;
+                        display: flex;
+                        align-items: center;
+
+                        background: url(/asset/img/event-03.jpg);
+
+                        .white-bg {
+                            width: 85%;
+                            height: 85%;
+                            margin: 0 auto;
+                            position: relative;
+                            text-align: center;
+
+                            .july {
+                                display: block;
+                                margin: 0;
+                                position: absolute;
+                                transform: translateX(-50%);
+                                top: 0;
+                                left: 50%;
+                                background: $black2;
+                                padding: 20px 30px;
+
+                                p {
+                                    color: $white1;
+                                    font-family: $font3;
+                                }
+
+                                p:first-child {
+                                    font-size: 2em;
+                                    font-weight: 600;
+                                }
+
+                                p:last-child {
+                                    font-size: 1.2em;
+                                }
+                            }
+
+                            .info {
+                                display: block;
+                                margin: 120px 0 0;
+
+                                &>p {
+                                    font-size: 1.6em;
+                                    letter-spacing: 1px;
+                                    color: $black2
+                                }
+
+                                div {
+                                    justify-content: center;
+                                }
+
+                                &>a {
+                                    margin-top: 50px;
+                                    color: $black2;
+                                }
+                            }
+
+                        }
                     }
                 }
             }
-
         }
+
     }
+}
 
-    .section5 {
+.section5 {
 
-        .section5-container {
-            margin: 250px 0;
-        }
+    .section5-container {
+        margin: 250px 0;
     }
 }
