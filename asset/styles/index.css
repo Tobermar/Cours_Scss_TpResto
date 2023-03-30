@@ -28,7 +28,7 @@ body {
   background: #21201e;
 }
 
-a::-moz-selection, h1::-moz-selection, h2::-moz-selection, h3::-moz-selection, h4::-moz-selection, h5::-moz-selection, h6::-moz-selection, p::-moz-selection, img::-moz-selection, span::-moz-selection, strong::-moz-selection, ul::-moz-selection, div::-moz-selection, button::-moz-selection, input::-moz-selection, option::-moz-selection {
+a::-moz-selection, h1::-moz-selection, h2::-moz-selection, h3::-moz-selection, h4::-moz-selection, h5::-moz-selection, h6::-moz-selection, p::-moz-selection, span::-moz-selection, strong::-moz-selection, ul::-moz-selection, li::-moz-selection, div::-moz-selection, button::-moz-selection, input::-moz-selection, option::-moz-selection, select::-moz-selection {
   background: rgb(202, 202, 202);
 }
 
@@ -40,15 +40,23 @@ h4::selection,
 h5::selection,
 h6::selection,
 p::selection,
-img::selection,
 span::selection,
 strong::selection,
 ul::selection,
+li::selection,
 div::selection,
 button::selection,
 input::selection,
-option::selection {
+option::selection,
+select::selection {
   background: rgb(202, 202, 202);
+}
+
+img,
+br {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 h2 {
@@ -846,6 +854,26 @@ footer .footer-container > div:first-child {
   margin: 80px;
   text-align: left;
 }
+@media screen and (max-width: 1440px) {
+  footer .footer-container > div:first-child {
+    margin: 80px 80px 80px 60px;
+  }
+}
+@media screen and (max-width: 1380px) {
+  footer .footer-container > div:first-child {
+    margin: 80px 80px 80px 30px;
+  }
+}
+@media screen and (max-width: 1300px) {
+  footer .footer-container > div:first-child {
+    margin: 80px 80px 80px 0px;
+  }
+}
+@media screen and (max-width: 1210px) {
+  footer .footer-container > div:first-child {
+    margin: 80px 80px 80px -30px;
+  }
+}
 footer .footer-container > div:first-child h2 {
   font-size: 3em;
   font-weight: 400;
@@ -857,8 +885,13 @@ footer .footer-container > div:first-child p {
   line-height: 2;
   font-size: 1.2em;
 }
+@media screen and (max-width: 1210px) {
+  footer .footer-container > div:first-child p {
+    font-size: 1em;
+  }
+}
 footer .footer-container > div:last-child {
-  margin: 80px;
+  margin: 86px 0 80px 80px;
   text-align: left;
 }
 footer .footer-container > div:last-child h6 {
@@ -868,6 +901,9 @@ footer .footer-container > div:last-child h6 {
 }
 footer .footer-container > div:last-child form {
   margin: 15px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 footer .footer-container > div:last-child form input {
   background: transparent;
@@ -875,16 +911,49 @@ footer .footer-container > div:last-child form input {
   color: rgb(233, 233, 233);
   font-size: 1em;
   font-weight: 400;
-  padding: 10px 30px 10px 10px;
+  height: 45px;
+  width: 315px;
+  padding-left: 10px;
 }
 footer .footer-container > div:last-child form button {
-  margin-left: 30px;
+  width: 74px;
+  height: 35px;
   background: #21201e;
   color: rgb(105, 105, 105);
   border: 1px solid rgba(233, 179, 131, 0.123);
   cursor: pointer;
   letter-spacing: 1px;
-  padding: 13px 20px;
   text-transform: uppercase;
   border-radius: 5px;
+  transition: 0.15s;
+}
+footer .footer-container > div:last-child form button:hover {
+  background: rgba(73, 73, 73, 0.767);
+  transform: scale(1.05);
+}
+footer .footer-container > div:last-child .social-media {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 112px 1fr;
+  gap: 40px;
+  padding-top: 10px;
+}
+footer .footer-container > div:last-child .social-media ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 200px;
+}
+@media screen and (max-width: 1000px) {
+  footer .footer-container > div:last-child .social-media ul {
+    width: 180px;
+  }
+}
+footer .footer-container > div:last-child .social-media ul i {
+  color: rgb(105, 105, 105);
+  transition: 0.15s ease-in-out;
+}
+footer .footer-container > div:last-child .social-media ul i:hover {
+  color: rgb(202, 202, 202);
+  transform: scale(1.05);
 }/*# sourceMappingURL=index.css.map */

@@ -53,16 +53,25 @@ h4::selection,
 h5::selection,
 h6::selection,
 p::selection,
-img::selection,
+// img::selection,
 span::selection,
 strong::selection,
 ul::selection,
+li::selection,
 div::selection,
 button::selection,
 input::selection,
-option::selection {
+option::selection,
+select::selection {
   background: $grey2;
 }
+
+img,
+br {
+  user-select: none
+}
+
+
 
 
 h2 {
