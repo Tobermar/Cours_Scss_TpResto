@@ -1,0 +1,66 @@
+footer {
+    .footer-container {
+        background: url(/asset/img/bg-footer.jpg) center;
+        display: grid;
+        grid-template-columns: 35% 35%;
+        justify-content: center;
+
+        &>div:first-child {
+            margin: 80px;
+            text-align: left;
+
+            h2 {
+                font-size: 3em;
+                font-weight: 400;
+            }
+
+            p {
+                color: $grey2;
+                font-family: $font3;
+                font-weight: 400;
+                line-height: 2;
+                font-size: 1.2em;
+            }
+        }
+
+        &>div:last-child {
+
+            margin: 80px;
+            text-align: left;
+
+            h6 {
+                color: $white1;
+                font-size: 1.2em;
+                font-family: $font3;
+            }
+
+            form {
+                margin: 15px 0;
+
+
+                input {
+                    background: transparent;
+                    border: $copper2 1px solid;
+                    color: $grey1;
+                    font-size: 1em;
+                    font-weight: 400;
+                    padding: 10px 30px 10px 10px;
+                }
+
+                button {
+                    margin-left: 30px;
+                    background: $grey4;
+                    color: $grey3;
+                    border: 1px solid $copper2;
+                    cursor: pointer;
+                    letter-spacing: 1px;
+                    padding: 13px 20px;
+                    text-transform: uppercase;
+                    border-radius: 5px;
+                    // border-radius: 10px;
+                }
+            }
+
+        }
+    }
+}

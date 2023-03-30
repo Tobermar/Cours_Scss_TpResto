@@ -514,10 +514,14 @@ main {
     }
 
     .section-event {
-        width: 70%;
+        width: 65%;
         margin: 150px auto 0;
 
         .section-event-container {
+
+            i {
+                font-size: 0.9em;
+            }
 
             .section-event-title {
                 h2 {
@@ -545,7 +549,7 @@ main {
                 .event-img-grid-container {
                     display: grid;
                     gap: 20px;
-                    grid-template-columns: 60% 40%;
+                    grid-template-columns: 55% 45%;
                     grid-template-rows: 215px 215px;
 
                     div {
@@ -558,7 +562,7 @@ main {
                         position: relative;
 
                         img {
-                            height: 220px;
+                            height: 230px;
                         }
 
                         .july {
@@ -598,10 +602,22 @@ main {
                         text-align: left;
                         margin-left: 25px;
 
+                        @media screen and (max-width:970px) {
+                            margin-left: 10px;
+                        }
+
                         &>p {
                             font-size: 1.7em;
                             margin: 40px 0 0;
                             letter-spacing: 1px;
+
+                            @media screen and (max-width:1440px) {
+                                font-size: 1.5em;
+                            }
+
+                            @media screen and (max-width:1290px) {
+                                font-size: 1.3em;
+                            }
                         }
 
                         div {
@@ -613,8 +629,12 @@ main {
                             color: $grey2;
 
                             p {
-                                font-size: 1.2em;
+                                font-size: 1em;
                                 padding: 0 10px 0 5px;
+
+                                @media screen and (max-width:1235px) {
+                                    font-size: 0.8em;
+                                }
                             }
 
                             a {
@@ -642,7 +662,7 @@ main {
                         display: flex;
                         align-items: center;
 
-                        background: url(/asset/img/event-03.jpg);
+                        background: url(/asset/img/event-03.jpg) center no-repeat;
 
                         .white-bg {
                             width: 85%;
@@ -683,15 +703,22 @@ main {
                                 &>p {
                                     font-size: 1.6em;
                                     letter-spacing: 1px;
-                                    color: $black2
+                                    color: $black2;
+
+                                    @media screen and (max-width: 1290px) {
+                                        font-size: 1.4em;
+                                    }
                                 }
 
                                 div {
+                                    margin: 0 10px;
                                     justify-content: center;
+
                                 }
 
                                 &>a {
-                                    margin-top: 50px;
+                                    display: block;
+                                    margin-top: 30px;
                                     color: $black2;
                                 }
                             }
@@ -706,8 +733,59 @@ main {
 }
 
 .section5 {
+    position: relative;
 
     .section5-container {
-        margin: 250px 0;
+        margin: 250px auto;
+        background: $white1;
+        width: 63%;
+        position: relative;
+        padding: 100px 100px 70px;
+        z-index: 3;
+
+        img {
+            border-radius: 150px;
+            height: 80px;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            top: 0px;
+        }
+
+        p {
+            font-family: $font3;
+            font-size: 1.3em;
+            line-height: 2;
+
+            i {
+                // font-size: 0.7em;
+
+            }
+        }
+
+        span {
+            display: block;
+            font-size: 1.8em;
+            font-family: $font3;
+            margin: 35px 0 30px;
+        }
+
+        h5 {
+            color: $copper1;
+            font-family: $font3;
+            font-size: 1.2em;
+            font-weight: 400;
+        }
+    }
+
+    .img-bg-gmap {
+        height: 400px;
+        width: 200%;
+        background: url(/asset/img/gmap.jpg) center;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        bottom: -500px;
+        left: 0;
+        z-index: -1;
     }
 }

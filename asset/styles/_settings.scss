@@ -25,6 +25,7 @@ $grey2: rgb(202, 202, 202);
 $grey3: rgb(105, 105, 105);
 $grey4: #21201e;
 $copper1: rgb(163, 112, 68);
+$copper2: rgba(233, 179, 131, 0.123);
 
 * {
   margin: 0;
@@ -71,12 +72,13 @@ h2 {
 
 h1,
 h3,
-h5,
 h6,
 .phone-number {
   font-family: $font2;
   text-transform: uppercase;
 }
+
+
 
 #people,
 #booking-day,

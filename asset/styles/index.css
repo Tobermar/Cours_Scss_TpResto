@@ -58,7 +58,6 @@ h2 {
 
 h1,
 h3,
-h5,
 h6,
 .phone-number {
   font-family: Poppins, sans-serif;
@@ -611,8 +610,11 @@ main .booking .booking-right-container form button:hover {
   transform: scale(1.05);
 }
 main .section-event {
-  width: 70%;
+  width: 65%;
   margin: 150px auto 0;
+}
+main .section-event .section-event-container i {
+  font-size: 0.9em;
 }
 main .section-event .section-event-container .section-event-title h2 {
   font-weight: 500;
@@ -631,7 +633,7 @@ main .section-event .section-event-container .img-couvert-gris img {
 main .section-event .section-event-container .event-img-container .event-img-grid-container {
   display: grid;
   gap: 20px;
-  grid-template-columns: 60% 40%;
+  grid-template-columns: 55% 45%;
   grid-template-rows: 215px 215px;
 }
 main .section-event .section-event-container .event-img-container .event-img-grid-container div {
@@ -644,7 +646,7 @@ main .section-event .section-event-container .event-img-container .event-img-gri
 }
 main .section-event .section-event-container .event-img-container .event-img-grid-container .event-bg1 img,
 main .section-event .section-event-container .event-img-container .event-img-grid-container .event-bg2 img {
-  height: 220px;
+  height: 230px;
 }
 main .section-event .section-event-container .event-img-container .event-img-grid-container .event-bg1 .july,
 main .section-event .section-event-container .event-img-container .event-img-grid-container .event-bg2 .july {
@@ -680,10 +682,25 @@ main .section-event .section-event-container .event-img-container .event-img-gri
   text-align: left;
   margin-left: 25px;
 }
+@media screen and (max-width: 970px) {
+  main .section-event .section-event-container .event-img-container .event-img-grid-container .white-bg {
+    margin-left: 10px;
+  }
+}
 main .section-event .section-event-container .event-img-container .event-img-grid-container .white-bg > p {
   font-size: 1.7em;
   margin: 40px 0 0;
   letter-spacing: 1px;
+}
+@media screen and (max-width: 1440px) {
+  main .section-event .section-event-container .event-img-container .event-img-grid-container .white-bg > p {
+    font-size: 1.5em;
+  }
+}
+@media screen and (max-width: 1290px) {
+  main .section-event .section-event-container .event-img-container .event-img-grid-container .white-bg > p {
+    font-size: 1.3em;
+  }
 }
 main .section-event .section-event-container .event-img-container .event-img-grid-container .white-bg div {
   padding: 20px 0;
@@ -692,8 +709,13 @@ main .section-event .section-event-container .event-img-container .event-img-gri
   color: rgb(202, 202, 202);
 }
 main .section-event .section-event-container .event-img-container .event-img-grid-container .white-bg div p {
-  font-size: 1.2em;
+  font-size: 1em;
   padding: 0 10px 0 5px;
+}
+@media screen and (max-width: 1235px) {
+  main .section-event .section-event-container .event-img-container .event-img-grid-container .white-bg div p {
+    font-size: 0.8em;
+  }
 }
 main .section-event .section-event-container .event-img-container .event-img-grid-container .white-bg div a {
   color: rgb(202, 202, 202);
@@ -713,7 +735,7 @@ main .section-event .section-event-container .event-img-container .event-img-gri
   grid-row: -3/-1;
   display: flex;
   align-items: center;
-  background: url(/asset/img/event-03.jpg);
+  background: url(/asset/img/event-03.jpg) center no-repeat;
 }
 main .section-event .section-event-container .event-img-container .event-img-grid-container .grid3 .white-bg {
   width: 85%;
@@ -752,14 +774,117 @@ main .section-event .section-event-container .event-img-container .event-img-gri
   letter-spacing: 1px;
   color: #21201e;
 }
+@media screen and (max-width: 1290px) {
+  main .section-event .section-event-container .event-img-container .event-img-grid-container .grid3 .white-bg .info > p {
+    font-size: 1.4em;
+  }
+}
 main .section-event .section-event-container .event-img-container .event-img-grid-container .grid3 .white-bg .info div {
+  margin: 0 10px;
   justify-content: center;
 }
 main .section-event .section-event-container .event-img-container .event-img-grid-container .grid3 .white-bg .info > a {
-  margin-top: 50px;
+  display: block;
+  margin-top: 30px;
   color: #21201e;
 }
 
+.section5 {
+  position: relative;
+}
 .section5 .section5-container {
-  margin: 250px 0;
+  margin: 250px auto;
+  background: #eeeeee;
+  width: 63%;
+  position: relative;
+  padding: 100px 100px 70px;
+  z-index: 3;
+}
+.section5 .section5-container img {
+  border-radius: 150px;
+  height: 80px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 0px;
+}
+.section5 .section5-container p {
+  font-family: Roboto, sans-serif;
+  font-size: 1.3em;
+  line-height: 2;
+}
+.section5 .section5-container span {
+  display: block;
+  font-size: 1.8em;
+  font-family: Roboto, sans-serif;
+  margin: 35px 0 30px;
+}
+.section5 .section5-container h5 {
+  color: rgb(163, 112, 68);
+  font-family: Roboto, sans-serif;
+  font-size: 1.2em;
+  font-weight: 400;
+}
+.section5 .img-bg-gmap {
+  height: 400px;
+  width: 200%;
+  background: url(/asset/img/gmap.jpg) center;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  bottom: -500px;
+  left: 0;
+  z-index: -1;
+}
+
+footer .footer-container {
+  background: url(/asset/img/bg-footer.jpg) center;
+  display: grid;
+  grid-template-columns: 35% 35%;
+  justify-content: center;
+}
+footer .footer-container > div:first-child {
+  margin: 80px;
+  text-align: left;
+}
+footer .footer-container > div:first-child h2 {
+  font-size: 3em;
+  font-weight: 400;
+}
+footer .footer-container > div:first-child p {
+  color: rgb(202, 202, 202);
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  line-height: 2;
+  font-size: 1.2em;
+}
+footer .footer-container > div:last-child {
+  margin: 80px;
+  text-align: left;
+}
+footer .footer-container > div:last-child h6 {
+  color: #eeeeee;
+  font-size: 1.2em;
+  font-family: Roboto, sans-serif;
+}
+footer .footer-container > div:last-child form {
+  margin: 15px 0;
+}
+footer .footer-container > div:last-child form input {
+  background: transparent;
+  border: rgba(233, 179, 131, 0.123) 1px solid;
+  color: rgb(233, 233, 233);
+  font-size: 1em;
+  font-weight: 400;
+  padding: 10px 30px 10px 10px;
+}
+footer .footer-container > div:last-child form button {
+  margin-left: 30px;
+  background: #21201e;
+  color: rgb(105, 105, 105);
+  border: 1px solid rgba(233, 179, 131, 0.123);
+  cursor: pointer;
+  letter-spacing: 1px;
+  padding: 13px 20px;
+  text-transform: uppercase;
+  border-radius: 5px;
 }/*# sourceMappingURL=index.css.map */
