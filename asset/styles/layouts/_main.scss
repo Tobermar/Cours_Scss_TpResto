@@ -3,7 +3,10 @@ main {
         background: $white1;
         display: grid;
         grid-template-columns: 50% 50%;
-        // height: 540px;
+
+        @media screen and (max-width:750px) {
+            display: block;
+        }
 
         .s1-left-container {
 
@@ -82,11 +85,20 @@ main {
             overflow: hidden;
             position: relative;
 
+            @media screen and (max-width:750px) {
+                display: none;
+            }
+
             img {
                 position: absolute;
                 transform: translateX(-50%);
                 left: 50%;
                 bottom: -100px;
+
+                @media screen and (max-width:930px) {
+                    bottom: -50px;
+                }
+
             }
         }
 
@@ -115,6 +127,10 @@ main {
             display: flex;
             justify-content: space-between;
 
+            @media screen and (max-width:900px) {
+                width: 80%;
+            }
+
             li {
                 color: $white1;
                 font-family: $font3;
@@ -127,7 +143,6 @@ main {
                     background: none;
                 }
 
-
                 &:first-child:after {
                     content: "";
                     position: absolute;
@@ -137,8 +152,6 @@ main {
                     height: 1px;
                     width: 100%;
                 }
-
-
 
                 &:hover:after {
                     content: "";
@@ -153,6 +166,10 @@ main {
 
                 @media screen and (max-width: 900px) {
                     font-size: 1.1em;
+                }
+
+                @media screen and (max-width: 400px) {
+                    font-size: 0.8em;
                 }
 
 
@@ -180,6 +197,15 @@ main {
             grid-template-columns: 50% 50%;
             grid-template-rows: 25% 25% 25% 25%;
 
+            @media screen and (max-width:900px) {
+                width: 80%;
+            }
+
+            @media screen and (max-width:750px) {
+                display: flex;
+                flex-direction: column;
+            }
+
 
             &::before {
                 content: "";
@@ -199,6 +225,18 @@ main {
                 grid-template-columns: 22% 61% 17%;
                 position: relative;
 
+                @media screen and (max-width:500px) {
+                    grid-template-columns: 80px 61% 17%;
+                }
+
+                @media screen and (max-width:500px) {
+                    grid-template-columns: 80px 57% 21%;
+                }
+
+                @media screen and (max-width:400px) {
+                    grid-template-columns: 70px 57% 21%;
+                }
+
                 &:after {
                     content: "";
                     position: absolute;
@@ -206,27 +244,44 @@ main {
                     background-size: 5px 1px;
                     // background: $grey2;
                     height: 1px;
-                    width: 420px;
+                    // width: 420px;
+                    width: 90%;
                     transform: translateX(-50%);
                     bottom: 0;
                     left: 50%;
 
-                    @media screen and (max-width:1480px) {
-                        width: 350px;
-                    }
+                    // @media screen and (max-width:1480px) {
+                    //     width: 350px;
+                    // }
 
-                    @media screen and (max-width:1300px) {
-                        width: 280px;
-                    }
+                    // @media screen and (max-width:1300px) {
+                    //     width: 280px;
+                    // }
 
-                    @media screen and (max-width:1000px) {
-                        width: 230px;
-                    }
+                    // @media screen and (max-width:1000px) {
+                    //     width: 230px;
+                    // }
+
+                    // @media screen and (max-width:900px) {
+                    //     width: 300px;
+                    // }
+
+                    // @media screen and (max-width:830px) {
+                    //     width: 270px;
+                    // }
+
+                    // @media screen and (max-width:750px) {
+                    //     width: 90%;
+                    // }
                 }
 
                 img {
                     border-radius: 150px;
                     width: 100%;
+
+                    // @media screen and (max-width:500px) {
+                    //     width: 80px;
+                    // }
                 }
 
                 .description {
@@ -244,13 +299,9 @@ main {
                             font-size: 0.9em;
                         }
 
-                        // @media screen and (max-width:1300px) {
-                        //     width: 280px;
-                        // }
-
-                        // @media screen and (max-width:1000px) {
-                        //     width: 230px;
-                        // }
+                        @media screen and (max-width:480px) {
+                            font-size: 0.8em;
+                        }
 
                     }
 
@@ -260,6 +311,10 @@ main {
 
                         @media screen and (max-width: 1480px) {
                             font-size: 1em;
+                        }
+
+                        @media screen and (max-width:480px) {
+                            font-size: 0.9em;
                         }
                     }
                 }
@@ -281,6 +336,11 @@ main {
         display: grid;
         grid-template-columns: 30% 70%;
 
+        @media screen and (max-width:1000px) {
+            display: flex;
+            flex-direction: column;
+        }
+
         .booking-left-container {
             background: black;
             padding: 30px;
@@ -291,6 +351,10 @@ main {
 
             @media screen and (max-width:1290px) {
                 padding: 20px;
+            }
+
+            @media screen and (max-width:1000px) {
+                padding: 30px;
             }
 
             // @media screen and (max-width:1160px) {
@@ -340,6 +404,10 @@ main {
                             font-size: 1em;
                         }
 
+                        @media screen and (max-width:1000px) {
+                            font-size: 1.4em;
+                        }
+
 
                     }
                 }
@@ -354,6 +422,10 @@ main {
 
                     @media screen and (max-width: 1160px) {
                         font-size: 0.8em;
+                    }
+
+                    @media screen and (max-width: 1000px) {
+                        font-size: 1em;
                     }
                 }
             }
@@ -373,7 +445,7 @@ main {
                 }
 
                 @media screen and (max-width:1000px) {
-                    font-size: 1em;
+                    font-size: 1.5em;
                 }
             }
         }
@@ -381,6 +453,13 @@ main {
         .booking-right-container {
             background: $white1;
 
+            @media screen and (max-width:1000px) {
+                height: 590px;
+            }
+
+            @media screen and (max-width:600px) {
+                height: 100%;
+            }
 
             .container {
 
@@ -399,15 +478,35 @@ main {
                         margin: 70px 0 0;
                     }
 
+                    @media screen and (max-width:1000px) {
+                        margin: 90px 0 0;
+                    }
+
                     h2 {
                         font-weight: 500;
                         font-size: 3.3em;
+
+                        @media screen and (max-width:510px) {
+                            font-size: 3em;
+                        }
+
+                        @media screen and (max-width:450px) {
+                            font-size: 2.8em;
+                        }
                     }
 
                     h3 {
                         font-size: 2.2em;
                         line-height: 0.5;
                         color: $black2;
+
+                        @media screen and (max-width:510px) {
+                            font-size: 2em;
+                        }
+
+                        @media screen and (max-width:450px) {
+                            font-size: 1.8em;
+                        }
                     }
 
                 }
@@ -430,6 +529,12 @@ main {
                 column-gap: 5px;
                 align-items: center;
                 text-align: left;
+
+                @media screen and (max-width:600px) {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 50px;
+                }
 
                 div {
                     // padding: 0 10px;
@@ -458,12 +563,9 @@ main {
                         outline: none;
                     }
 
-
                     option {
                         background: $white1;
                         color: $grey4;
-
-
                     }
                 }
 
@@ -473,6 +575,8 @@ main {
                     background: none;
                     width: 100%;
                     font-size: 1.3em;
+
+
                 }
 
                 #booking-time {
@@ -507,6 +611,10 @@ main {
                         transform: scale(1.05);
                     }
 
+                    @media screen and (max-width:600px) {
+                        margin: 50px auto 50px;
+                    }
+
                 }
             }
 
@@ -516,6 +624,10 @@ main {
     .section-event {
         width: 65%;
         margin: 150px auto 0;
+
+        @media screen and (max-width:900px) {
+            display: none;
+        }
 
         .section-event-container {
 
@@ -730,62 +842,85 @@ main {
         }
 
     }
-}
 
-.section5 {
-    position: relative;
-
-    .section5-container {
-        margin: 250px auto;
-        background: $white1;
-        width: 63%;
+    .section5 {
         position: relative;
-        padding: 100px 100px 70px;
-        z-index: 3;
 
-        img {
-            border-radius: 150px;
-            height: 80px;
-            position: absolute;
-            transform: translate(-50%, -50%);
-            left: 50%;
-            top: 0px;
-        }
+        .section5-container {
+            margin: 250px auto;
+            background: $white1;
+            width: 63%;
+            position: relative;
+            padding: 100px 100px 70px;
+            z-index: 3;
 
-        p {
-            font-family: $font3;
-            font-size: 1.3em;
-            line-height: 2;
+            @media screen and (max-width:830px) {
+                padding: 100px 50px 70px;
+            }
 
-            i {
-                // font-size: 0.7em;
+            img {
+                border-radius: 150px;
+                height: 80px;
+                position: absolute;
+                transform: translate(-50%, -50%);
+                left: 50%;
+                top: 0px;
+            }
 
+            p {
+                font-family: $font3;
+                font-size: 1.3em;
+                line-height: 2;
+
+                @media screen and (max-width:700px) {
+                    font-size: 1.1em;
+                }
+
+                @media screen and (max-width:750px) {
+                    display: -webkit-box;
+                    -webkit-line-clamp: 10;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                }
+
+                i {
+                    // font-size: 0.7em;
+
+                }
+            }
+
+            span {
+                display: block;
+                font-size: 1.8em;
+                font-family: $font3;
+                margin: 35px 0 30px;
+
+                @media screen and (max-width:700px) {
+                    font-size: 1.5em;
+                }
+
+                // @media screen and (max-width:500px) {
+                //     font-size: 1.3em;
+                // }
+            }
+
+            h5 {
+                color: $copper1;
+                font-family: $font3;
+                font-size: 1.2em;
+                font-weight: 400;
             }
         }
 
-        span {
-            display: block;
-            font-size: 1.8em;
-            font-family: $font3;
-            margin: 35px 0 30px;
+        .img-bg-gmap {
+            height: 400px;
+            width: 200%;
+            background: url(/asset/img/gmap.jpg) center;
+            transform: translate(-50%, -50%);
+            position: absolute;
+            bottom: -500px;
+            left: 0;
+            z-index: -1;
         }
-
-        h5 {
-            color: $copper1;
-            font-family: $font3;
-            font-size: 1.2em;
-            font-weight: 400;
-        }
-    }
-
-    .img-bg-gmap {
-        height: 400px;
-        width: 200%;
-        background: url(/asset/img/gmap.jpg) center;
-        transform: translate(-50%, -50%);
-        position: absolute;
-        bottom: -500px;
-        left: 0;
-        z-index: -1;
     }
 }

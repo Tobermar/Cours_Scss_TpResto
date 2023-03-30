@@ -5,9 +5,18 @@ footer {
         grid-template-columns: 35% 35%;
         justify-content: center;
 
+        @media screen and (max-width: 900px) {
+            background: $black2;
+        }
+
+
         &>div:first-child {
             margin: 80px;
             text-align: left;
+
+            @media screen and (max-width: 900px) {
+                display: none;
+            }
 
             @media screen and (max-width: 1440px) {
                 margin: 80px 80px 80px 60px;
@@ -48,6 +57,11 @@ footer {
             margin: 86px 0 80px 80px;
             text-align: left;
 
+            @media screen and (max-width: 900px) {
+                width: 100%;
+                margin: 86px 0 80px 0px;
+            }
+
             h6 {
                 color: $white1;
                 font-size: 1.2em;
@@ -70,6 +84,10 @@ footer {
                     height: 45px;
                     width: 315px;
                     padding-left: 10px;
+
+                    @media screen and (max-width: 500px) {
+                        width: 290px;
+                    }
                 }
 
                 button {
@@ -110,6 +128,10 @@ footer {
 
                     @media screen and (max-width:1000px) {
                         width: 180px;
+                    }
+
+                    @media screen and (max-width: 500px) {
+                        width: 150px;
                     }
 
 

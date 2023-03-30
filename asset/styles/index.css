@@ -181,8 +181,18 @@ header .nav-container .ul-nav {
     font-size: 0.9em;
   }
 }
+@media screen and (max-width: 700px) {
+  header .nav-container .ul-nav {
+    display: none;
+  }
+}
 header .nav-container .ul-social {
   width: 10%;
+}
+@media screen and (max-width: 700px) {
+  header .nav-container .ul-social {
+    width: 50%;
+  }
 }
 header .text-container {
   margin-top: 220px;
@@ -192,10 +202,31 @@ header .text-container h2 {
   font-weight: 500;
   line-height: 5px;
 }
+@media screen and (max-width: 700px) {
+  header .text-container h2 {
+    font-size: 3em;
+  }
+}
 header .text-container h1 {
   font-size: 4em;
   color: #eeeeee;
   letter-spacing: 15px;
+}
+@media screen and (max-width: 700px) {
+  header .text-container h1 {
+    font-size: 3em;
+    margin-top: 35px;
+  }
+}
+@media screen and (max-width: 500px) {
+  header .text-container h1 {
+    font-size: 2.5em;
+  }
+}
+@media screen and (max-width: 400px) {
+  header .text-container h1 {
+    font-size: 2.3em;
+  }
 }
 header .text-container img {
   margin: 40px 0;
@@ -207,11 +238,56 @@ header .text-container p {
   font-family: Roboto, sans-serif;
   letter-spacing: 8px;
 }
+@media screen and (max-width: 750px) {
+  header .text-container p {
+    padding: 0 150px;
+  }
+}
+@media screen and (max-width: 700px) {
+  header .text-container p {
+    padding: 0 120px;
+  }
+}
+@media screen and (max-width: 650px) {
+  header .text-container p {
+    padding: 0 100px;
+  }
+}
+@media screen and (max-width: 580px) {
+  header .text-container p {
+    padding: 0 80px;
+  }
+}
+@media screen and (max-width: 540px) {
+  header .text-container p {
+    padding: 0 50px;
+  }
+}
+@media screen and (max-width: 480px) {
+  header .text-container p {
+    padding: 0 30px;
+  }
+}
+@media screen and (max-width: 440px) {
+  header .text-container p {
+    padding: 0 0px;
+  }
+}
+@media screen and (max-width: 400px) {
+  header .text-container p {
+    font-size: 0.8em;
+  }
+}
 
 main .section1 {
   background: #eeeeee;
   display: grid;
   grid-template-columns: 50% 50%;
+}
+@media screen and (max-width: 750px) {
+  main .section1 {
+    display: block;
+  }
 }
 main .section1 .s1-left-container {
   padding: 20px;
@@ -264,11 +340,21 @@ main .section1 .s1-right-container {
   overflow: hidden;
   position: relative;
 }
+@media screen and (max-width: 750px) {
+  main .section1 .s1-right-container {
+    display: none;
+  }
+}
 main .section1 .s1-right-container img {
   position: absolute;
   transform: translateX(-50%);
   left: 50%;
   bottom: -100px;
+}
+@media screen and (max-width: 930px) {
+  main .section1 .s1-right-container img {
+    bottom: -50px;
+  }
 }
 main .section2 {
   position: relative;
@@ -287,6 +373,11 @@ main .section2 ul {
   margin: 30px auto;
   display: flex;
   justify-content: space-between;
+}
+@media screen and (max-width: 900px) {
+  main .section2 ul {
+    width: 80%;
+  }
 }
 main .section2 ul li {
   color: #eeeeee;
@@ -322,6 +413,11 @@ main .section2 ul li:hover:after {
     font-size: 1.1em;
   }
 }
+@media screen and (max-width: 400px) {
+  main .section2 ul li {
+    font-size: 0.8em;
+  }
+}
 main .section2 .img-bg {
   background: url(/asset/img/bg-menu-01.jpg) center/cover no-repeat;
   height: 750px;
@@ -340,6 +436,17 @@ main .section2 .menu {
   grid-template-columns: 50% 50%;
   grid-template-rows: 25% 25% 25% 25%;
 }
+@media screen and (max-width: 900px) {
+  main .section2 .menu {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 750px) {
+  main .section2 .menu {
+    display: flex;
+    flex-direction: column;
+  }
+}
 main .section2 .menu::before {
   content: "";
   position: absolute;
@@ -356,31 +463,31 @@ main .section2 .menu .dishe {
   grid-template-columns: 22% 61% 17%;
   position: relative;
 }
+@media screen and (max-width: 500px) {
+  main .section2 .menu .dishe {
+    grid-template-columns: 80px 61% 17%;
+  }
+}
+@media screen and (max-width: 500px) {
+  main .section2 .menu .dishe {
+    grid-template-columns: 80px 57% 21%;
+  }
+}
+@media screen and (max-width: 400px) {
+  main .section2 .menu .dishe {
+    grid-template-columns: 70px 57% 21%;
+  }
+}
 main .section2 .menu .dishe:after {
   content: "";
   position: absolute;
   background-image: linear-gradient(90deg, rgb(202, 202, 202), rgb(202, 202, 202) 75%, transparent 75%, transparent 100%);
   background-size: 5px 1px;
   height: 1px;
-  width: 420px;
+  width: 90%;
   transform: translateX(-50%);
   bottom: 0;
   left: 50%;
-}
-@media screen and (max-width: 1480px) {
-  main .section2 .menu .dishe:after {
-    width: 350px;
-  }
-}
-@media screen and (max-width: 1300px) {
-  main .section2 .menu .dishe:after {
-    width: 280px;
-  }
-}
-@media screen and (max-width: 1000px) {
-  main .section2 .menu .dishe:after {
-    width: 230px;
-  }
 }
 main .section2 .menu .dishe img {
   border-radius: 150px;
@@ -402,6 +509,11 @@ main .section2 .menu .dishe .description h4 {
     font-size: 0.9em;
   }
 }
+@media screen and (max-width: 480px) {
+  main .section2 .menu .dishe .description h4 {
+    font-size: 0.8em;
+  }
+}
 main .section2 .menu .dishe .description p {
   font-family: Roboto, sans-serif;
   font-size: 1.3em;
@@ -409,6 +521,11 @@ main .section2 .menu .dishe .description p {
 @media screen and (max-width: 1480px) {
   main .section2 .menu .dishe .description p {
     font-size: 1em;
+  }
+}
+@media screen and (max-width: 480px) {
+  main .section2 .menu .dishe .description p {
+    font-size: 0.9em;
   }
 }
 main .section2 .menu .dishe .price {
@@ -425,6 +542,12 @@ main .booking {
   display: grid;
   grid-template-columns: 30% 70%;
 }
+@media screen and (max-width: 1000px) {
+  main .booking {
+    display: flex;
+    flex-direction: column;
+  }
+}
 main .booking .booking-left-container {
   background: black;
   padding: 30px;
@@ -437,6 +560,11 @@ main .booking .booking-left-container {
 @media screen and (max-width: 1290px) {
   main .booking .booking-left-container {
     padding: 20px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  main .booking .booking-left-container {
+    padding: 30px;
   }
 }
 main .booking .booking-left-container .border {
@@ -476,6 +604,11 @@ main .booking .booking-left-container .border .day h3 {
     font-size: 1em;
   }
 }
+@media screen and (max-width: 1000px) {
+  main .booking .booking-left-container .border .day h3 {
+    font-size: 1.4em;
+  }
+}
 main .booking .booking-left-container .border p {
   color: #eeeeee;
   font-family: Roboto, sans-serif;
@@ -488,6 +621,11 @@ main .booking .booking-left-container .border p {
 @media screen and (max-width: 1160px) {
   main .booking .booking-left-container .border p {
     font-size: 0.8em;
+  }
+}
+@media screen and (max-width: 1000px) {
+  main .booking .booking-left-container .border p {
+    font-size: 1em;
   }
 }
 main .booking .booking-left-container .phone-number {
@@ -508,11 +646,21 @@ main .booking .booking-left-container .phone-number {
 }
 @media screen and (max-width: 1000px) {
   main .booking .booking-left-container .phone-number {
-    font-size: 1em;
+    font-size: 1.5em;
   }
 }
 main .booking .booking-right-container {
   background: #eeeeee;
+}
+@media screen and (max-width: 1000px) {
+  main .booking .booking-right-container {
+    height: 590px;
+  }
+}
+@media screen and (max-width: 600px) {
+  main .booking .booking-right-container {
+    height: 100%;
+  }
 }
 main .booking .booking-right-container .container .title {
   margin: 90px 0 0;
@@ -532,14 +680,39 @@ main .booking .booking-right-container .container .title {
     margin: 70px 0 0;
   }
 }
+@media screen and (max-width: 1000px) {
+  main .booking .booking-right-container .container .title {
+    margin: 90px 0 0;
+  }
+}
 main .booking .booking-right-container .container .title h2 {
   font-weight: 500;
   font-size: 3.3em;
+}
+@media screen and (max-width: 510px) {
+  main .booking .booking-right-container .container .title h2 {
+    font-size: 3em;
+  }
+}
+@media screen and (max-width: 450px) {
+  main .booking .booking-right-container .container .title h2 {
+    font-size: 2.8em;
+  }
 }
 main .booking .booking-right-container .container .title h3 {
   font-size: 2.2em;
   line-height: 0.5;
   color: #21201e;
+}
+@media screen and (max-width: 510px) {
+  main .booking .booking-right-container .container .title h3 {
+    font-size: 2em;
+  }
+}
+@media screen and (max-width: 450px) {
+  main .booking .booking-right-container .container .title h3 {
+    font-size: 1.8em;
+  }
 }
 main .booking .booking-right-container img {
   height: 35px;
@@ -556,6 +729,13 @@ main .booking .booking-right-container form {
        column-gap: 5px;
   align-items: center;
   text-align: left;
+}
+@media screen and (max-width: 600px) {
+  main .booking .booking-right-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
 }
 main .booking .booking-right-container form div {
   width: 90%;
@@ -617,9 +797,19 @@ main .booking .booking-right-container form button:hover {
   box-shadow: 0px 0px 5px black;
   transform: scale(1.05);
 }
+@media screen and (max-width: 600px) {
+  main .booking .booking-right-container form button {
+    margin: 50px auto 50px;
+  }
+}
 main .section-event {
   width: 65%;
   margin: 150px auto 0;
+}
+@media screen and (max-width: 900px) {
+  main .section-event {
+    display: none;
+  }
 }
 main .section-event .section-event-container i {
   font-size: 0.9em;
@@ -796,11 +986,10 @@ main .section-event .section-event-container .event-img-container .event-img-gri
   margin-top: 30px;
   color: #21201e;
 }
-
-.section5 {
+main .section5 {
   position: relative;
 }
-.section5 .section5-container {
+main .section5 .section5-container {
   margin: 250px auto;
   background: #eeeeee;
   width: 63%;
@@ -808,7 +997,12 @@ main .section-event .section-event-container .event-img-container .event-img-gri
   padding: 100px 100px 70px;
   z-index: 3;
 }
-.section5 .section5-container img {
+@media screen and (max-width: 830px) {
+  main .section5 .section5-container {
+    padding: 100px 50px 70px;
+  }
+}
+main .section5 .section5-container img {
   border-radius: 150px;
   height: 80px;
   position: absolute;
@@ -816,24 +1010,42 @@ main .section-event .section-event-container .event-img-container .event-img-gri
   left: 50%;
   top: 0px;
 }
-.section5 .section5-container p {
+main .section5 .section5-container p {
   font-family: Roboto, sans-serif;
   font-size: 1.3em;
   line-height: 2;
 }
-.section5 .section5-container span {
+@media screen and (max-width: 700px) {
+  main .section5 .section5-container p {
+    font-size: 1.1em;
+  }
+}
+@media screen and (max-width: 750px) {
+  main .section5 .section5-container p {
+    display: -webkit-box;
+    -webkit-line-clamp: 10;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+main .section5 .section5-container span {
   display: block;
   font-size: 1.8em;
   font-family: Roboto, sans-serif;
   margin: 35px 0 30px;
 }
-.section5 .section5-container h5 {
+@media screen and (max-width: 700px) {
+  main .section5 .section5-container span {
+    font-size: 1.5em;
+  }
+}
+main .section5 .section5-container h5 {
   color: rgb(163, 112, 68);
   font-family: Roboto, sans-serif;
   font-size: 1.2em;
   font-weight: 400;
 }
-.section5 .img-bg-gmap {
+main .section5 .img-bg-gmap {
   height: 400px;
   width: 200%;
   background: url(/asset/img/gmap.jpg) center;
@@ -850,9 +1062,19 @@ footer .footer-container {
   grid-template-columns: 35% 35%;
   justify-content: center;
 }
+@media screen and (max-width: 900px) {
+  footer .footer-container {
+    background: #21201e;
+  }
+}
 footer .footer-container > div:first-child {
   margin: 80px;
   text-align: left;
+}
+@media screen and (max-width: 900px) {
+  footer .footer-container > div:first-child {
+    display: none;
+  }
 }
 @media screen and (max-width: 1440px) {
   footer .footer-container > div:first-child {
@@ -894,6 +1116,12 @@ footer .footer-container > div:last-child {
   margin: 86px 0 80px 80px;
   text-align: left;
 }
+@media screen and (max-width: 900px) {
+  footer .footer-container > div:last-child {
+    width: 100%;
+    margin: 86px 0 80px 0px;
+  }
+}
 footer .footer-container > div:last-child h6 {
   color: #eeeeee;
   font-size: 1.2em;
@@ -914,6 +1142,11 @@ footer .footer-container > div:last-child form input {
   height: 45px;
   width: 315px;
   padding-left: 10px;
+}
+@media screen and (max-width: 500px) {
+  footer .footer-container > div:last-child form input {
+    width: 290px;
+  }
 }
 footer .footer-container > div:last-child form button {
   width: 74px;
@@ -947,6 +1180,11 @@ footer .footer-container > div:last-child .social-media ul {
 @media screen and (max-width: 1000px) {
   footer .footer-container > div:last-child .social-media ul {
     width: 180px;
+  }
+}
+@media screen and (max-width: 500px) {
+  footer .footer-container > div:last-child .social-media ul {
+    width: 150px;
   }
 }
 footer .footer-container > div:last-child .social-media ul i {
